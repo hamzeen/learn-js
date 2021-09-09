@@ -1,0 +1,27 @@
+{
+  "name": "learn-js",
+  "version": "1.0.0",
+  "description": "Learn JS Gitbook",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "rxjs": "^5.0.0-beta.2"
+  },
+  "scripts": {
+    "gb": "gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/btroncone/learn-rxjs.git"
+  },
+  "keywords": [
+    "rxjs"
+  ],
+  "author": "Hamzeen. H. <http://twitter.com/hamzeen>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hamzeen/learn-js/issues"
+  },
+  "homepage": "https://github.com/hamzeen/learn-js"
+}

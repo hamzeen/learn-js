@@ -13,24 +13,8 @@
  }
 ```
 
-# 2. Trivia
 
-## 2.1. sum of even number in an array
-```javascript
-const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-const c1 = nums.filter(a => a%2 === 0).reduce((a,b) => a+b, 0);
-
-const sumEvens = (nums) => {
-  var total=0;
-  for (let i of nums) { 
-    if (i%2 ===0) total += i; 
-  }
-  return total;
-}
-```
-
-## 2.2. sum of nums: divisible by 3 & 5
+## 1.2. sum of nums: divisible by 3 & 5
 ```javascript
 export const solution = (number: number): number => {
   let result = 0;
@@ -42,7 +26,7 @@ export const solution = (number: number): number => {
 };
 ```
 
-# get middle char(s)
+## 1.3. get middle char(s)
 ```javascript
 const getMiddle = (s: string): string => {
   const len = (s.length % 2 === 0) ? 2 : 1;
@@ -54,7 +38,7 @@ console.log("middle:: "+ extractMiddle("ABDC")); // BD
 console.log("middle:: "+ extractMiddle("ABD")); // B
 ```
 
-# get average working hours per day
+# 1.4. Average working hours per day
 ```javascript
 export function averagePerDay(hours: string[]): number {
   if (typeof hours !== 'undefined' && hours.length === 0) {
@@ -88,7 +72,7 @@ const result = averagePerDay(input);
 console.log("LC::" + result); // 300 (5 hours)
 ```
 
-# find outlier
+# 1.5. Find outlier
 ```javascript
 export function findOutlier(integers: number[]): number {
    var evenNums = [];
@@ -111,7 +95,7 @@ export function findOutlier(integers: number[]): number {
 }
 ```
 
-# 0.1 + 0.2 != 0.3
-  [why](https://javascript.plainenglish.io/why-0-1-0-2-0-3-in-javascript-d7e218224a72)
+## 1.6. Why? 0.1 + 0.2 != 0.3
+  [reason](https://javascript.plainenglish.io/why-0-1-0-2-0-3-in-javascript-d7e218224a72)
 
 

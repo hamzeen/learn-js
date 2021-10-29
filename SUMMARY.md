@@ -5,10 +5,11 @@
 ## Javascript
 
   - [TOC](javascript/README.md)
-  - [Concepts](javascript/concepts.md)
-  - [Events](javascript/events.md)
-  - [Util/Trivia](javascript/trivia.md)
   - [JSON](javascript/JSON.md)
+  - [Concepts](javascript/concepts.md)
+  - [Helpers](javascript/trivia.md)
+  - [JS Core](javascript/js-core.md)
+  - [JS String](javascript/js-string.md)
 
 ## React
   - [Overview](react/README.md)

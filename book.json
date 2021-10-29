@@ -1,6 +1,6 @@
 {
-  "gitbook": "3.1.1",
-  "title": "Learn RxJS",
+  "gitbook": "3.1.2",
+  "title": "Learn JS",
   "plugins": [
     "include-codeblock",
     "advanced-emoji",

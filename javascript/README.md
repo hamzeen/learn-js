@@ -1,9 +1,11 @@
 
 # State of Javascript
 
-
 Javascript was developed by Brendon Eich as a browser interpreted language within 2 weeks.
 Today it can run outside the browser thanks to Node.js which embraces JS anywhere and everywhere paradigm.
+
+## Data Types
+  * Undefined | Null | Boolean| String| Symbol | Number | Object
 
 
 ## pagination: total number of pages
@@ -48,8 +50,6 @@ function QuickSort(a, from, to) {
 
 
 # trivia/tools
-* The data types supported by JavaScript are:
-  * Undefined | Null | Boolean| String| Symbol | Number | Object
 * JS performance: <https://jsperf.com/>
 * beginner to intermediate [questions](https://www.edureka.co/blog/interview-questions/javascript-interview-questions/)
 * comomn [mistkaes](https://www.toptal.com/nodejs/top-10-common-nodejs-developer-mistakes) by nodejs devs

@@ -1,10 +1,11 @@
 {
   "name": "learn-js",
   "version": "1.0.0",
-  "description": "Learn JS Gitbook",
+  "description": "Learn JS",
   "main": "",
   "dependencies": {},
   "devDependencies": {
+    "gitbook": "^2.6.9",
     "gitbook-cli": "^2.3.2",
     "jasmine": "^2.4.1",
     "rxjs": "^5.0.0-beta.2"

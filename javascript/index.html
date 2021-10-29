@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>TOC · Learn RxJS</title>
+        <title>TOC · Learn JS</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -68,7 +68,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="concepts.html" />
+    <link rel="next" href="JSON.html" />
     
     
     <link rel="prev" href="../" />
@@ -92,10 +92,6 @@
     <div class="book-summary">
         
             
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
-</div>
-
             
                 <nav role="navigation">
                 
@@ -144,7 +140,20 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="concepts.html">
+        <li class="chapter " data-level="2.2" data-path="JSON.html">
+            
+                <a href="JSON.html">
+            
+                    
+                    JSON
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="concepts.html">
             
                 <a href="concepts.html">
             
@@ -157,25 +166,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="events.html">
-            
-                <a href="events.html">
-            
-                    
-                    Events
-            
-                </a>
-            
-
-            
-        </li>
-    
         <li class="chapter " data-level="2.4" data-path="trivia.html">
             
                 <a href="trivia.html">
             
                     
-                    Util/Trivia
+                    Helpers
             
                 </a>
             
@@ -183,12 +179,25 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="JSON.html">
+        <li class="chapter " data-level="2.5" data-path="js-core.html">
             
-                <a href="JSON.html">
+                <a href="js-core.html">
             
                     
-                    JSON
+                    JS Core
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="js-string.html">
+            
+                <a href="js-string.html">
+            
+                    
+                    JS String
             
                 </a>
             
@@ -256,14 +265,15 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
-    <div class="search-noresults">
-    
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="state-of-javascript">State of Javascript</h1>
 <p>Javascript was developed by Brendon Eich as a browser interpreted language within 2 weeks.
 Today it can run outside the browser thanks to Node.js which embraces JS anywhere and everywhere paradigm.</p>
+<h2 id="data-types">Data Types</h2>
+<ul>
+<li>Undefined | Null | Boolean| String| Symbol | Number | Object</li>
+</ul>
 <h2 id="pagination-total-number-of-pages">pagination: total number of pages</h2>
 <pre class="language-"><code class="lang-javascript">Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span>total_items<span class="token operator">/</span>limit<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -299,10 +309,6 @@ Today it can run outside the browser thanks to Node.js which embraces JS anywher
 </ul>
 <h1 id="triviatools">trivia/tools</h1>
 <ul>
-<li>The data types supported by JavaScript are:<ul>
-<li>Undefined | Null | Boolean| String| Symbol | Number | Object</li>
-</ul>
-</li>
 <li>JS performance: <a href="https://jsperf.com/" target="_blank">https://jsperf.com/</a></li>
 <li>beginner to intermediate <a href="https://www.edureka.co/blog/interview-questions/javascript-interview-questions/" target="_blank">questions</a></li>
 <li>comomn <a href="https://www.toptal.com/nodejs/top-10-common-nodejs-developer-mistakes" target="_blank">mistkaes</a> by nodejs devs</li>
@@ -312,22 +318,6 @@ Today it can run outside the browser thanks to Node.js which embraces JS anywher
                                 
                                 </section>
                             
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
                         </div>
                     </div>
                 
@@ -340,7 +330,7 @@ Today it can run outside the browser thanks to Node.js which embraces JS anywher
                 </a>
                 
                 
-                <a href="concepts.html" class="navigation navigation-next " aria-label="Next page: Concepts">
+                <a href="JSON.html" class="navigation navigation-next " aria-label="Next page: JSON">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -351,7 +341,7 @@ Today it can run outside the browser thanks to Node.js which embraces JS anywher
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TOC","level":"2.1","depth":1,"next":{"title":"Concepts","level":"2.2","depth":1,"path":"javascript/concepts.md","ref":"javascript/concepts.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn RxJS","gitbook":"3.1.1"},"file":{"path":"javascript/README.md","mtime":"2021-10-29T02:59:18.869Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-10-29T03:58:51.196Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"TOC","level":"2.1","depth":1,"next":{"title":"JSON","level":"2.2","depth":1,"path":"javascript/JSON.md","ref":"javascript/JSON.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{"maxIndexSize":1000000},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"javascript/README.md","mtime":"2021-10-29T05:30:04.421Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-10-29T05:51:56.231Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -381,7 +371,7 @@ Today it can run outside the browser thanks to Node.js which embraces JS anywher
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-search/lunr.min.js"></script>
         
     
         
@@ -401,7 +391,7 @@ Today it can run outside the browser thanks to Node.js which embraces JS anywher
         
     
         
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
         
     
 

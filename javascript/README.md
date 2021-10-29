@@ -2,7 +2,8 @@
 # State of Javascript
 
 
-
+Javascript was developed by Brendon Eich as a browser interpreted language within 2 weeks.
+Today it can run outside the browser thanks to Node.js which embraces JS anywhere and everywhere paradigm.
 
 
 ## pagination: total number of pages

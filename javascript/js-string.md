@@ -70,6 +70,30 @@ function sort(sample_input) {
 // expected_output => ['coding', '1', 'hello', '2', '3', '4', 'test', 'world'];
 
 ```
+# 08. Templating
+```js
+const interpolate = function (text, data) {
+  if (!text) {
+    return 'no input was provided';    
+  } else {
+    let template = text;
+
+    template = template.replace(/\{\{([^}]+)\}\}/g, (match) => {
+      
+      match = match.slice(2, -2); // removes curly braces, either sides
+      if (!data[match]) {
+        return '{{' + match + '}}';
+      }
+      return data[match];
+    });
+    return template;
+  }
+};
+
+var options = {	liquid: 'water', temperature: '100'};
+const txtToParse = 'the {{liquid}} boils at {{temperature}} degrees celsius';
+const txtResult = interpolate(txtToParse, options);
+```
 
 # 05. Altered SOS Messages
 A space explorer's [ship](https://www.hackerrank.com/challenges/mars-exploration/problem) crashed on Mars! They send a series of SOS messages to Earth for help.
@@ -169,27 +193,3 @@ function marsExploration(s) {
 }
 ```
 
-# 08. Templating
-```js
-const interpolate = function (text, data) {
-  if (!text) {
-    return 'no input was provided';    
-  } else {
-    let template = text;
-
-    template = template.replace(/\{\{([^}]+)\}\}/g, (match) => {
-      
-      match = match.slice(2, -2); // removes curly braces, either sides
-      if (!data[match]) {
-        return '{{' + match + '}}';
-      }
-      return data[match];
-    });
-    return template;
-  }
-};
-
-var options = {	liquid: 'water', temperature: '100'};
-const txtToParse = 'the {{liquid}} boils at {{temperature}} degrees celsius';
-const txtResult = interpolate(txtToParse, options);
-```

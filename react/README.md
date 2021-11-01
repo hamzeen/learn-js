@@ -7,6 +7,7 @@ It was initially made for 3 things:
  * State Management
 
 
+## some basic concepts
 
  * virtual DOM
 React uses virtual DOM to enhance its performance. It uses the observable to detect state and prop changes. React uses an efficient diff algorithm to compare the versions of virtual DOM. It then makes sure that batched updates are sent to the real DOM for repainting or re-rendering of the UI.

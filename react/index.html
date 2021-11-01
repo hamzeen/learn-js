@@ -265,8 +265,102 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="about-reactjs">About React.js</h1>
-<p>Welcome to reactive programming!</p>
+                                <h1 id="overview-reactjs">Overview React.js</h1>
+<p>Welcome to reactive programming! React.JS is an open-source fron-end library developed by Facebook.
+It was initially made for 3 things:</p>
+<ul>
+<li>DOM Manipulation</li>
+<li>Component Management</li>
+<li>State Management</li>
+</ul>
+<h2 id="some-basic-concepts">some basic concepts</h2>
+<ul>
+<li><p>virtual DOM
+React uses virtual DOM to enhance its performance. It uses the observable to detect state and prop changes. React uses an efficient diff algorithm to compare the versions of virtual DOM. It then makes sure that batched updates are sent to the real DOM for repainting or re-rendering of the UI.</p>
+</li>
+<li><p>PROPS vs STATE
+The state is a data structure that starts with a default value when a Component mounts. It may be mutated across time, mostly as a result of user events.
+Props (short for properties) are a Component&#x2019;s configuration. Props are how components talk to each other. They are received from above component and immutable as far as the Component receiving them is concerned.</p>
+</li>
+<li><p>React vs React Native
+In Reactjs, virtual DOM is used to render browser code in Reactjs<br>while in React Native, native APIs are used to render components in mobile.</p>
+</li>
+</ul>
+<h2 id="init-with-cra">init with CRA</h2>
+<pre class="language-"><code class="lang-sh">npx create-react-app react-boilerplate
+<span class="token builtin class-name">cd</span> react-boilerplate <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> <span class="token function">install</span>
+</code></pre>
+<pre class="language-"><code class="lang-sh"><span class="token builtin class-name">echo</span> <span class="token string">&quot;SKIP_PREFLIGHT_CHECK=true&quot;</span> <span class="token operator">&gt;</span> .env <span class="token operator">&amp;&amp;</span> <span class="token function">open</span> .env
+<span class="token function">npm</span> start
+</code></pre>
+<h1 id="http-calls-using-axios">HTTP Calls using Axios</h1>
+<ul>
+<li><p>Using <a href="https://stackblitz.com/edit/react-template-hamzeen" target="_blank">State</a></p>
+</li>
+<li><p>install axios: <code>npm install axios</code></p>
+</li>
+<li><p>import &amp; usage:
+```js
+import axios from &quot;axios&quot;;
+import React from &quot;react&quot;;</p>
+</li>
+</ul>
+<p>const baseURL = &quot;<a href="https://jsonplaceholder.typicode.com/posts" target="_blank">https://jsonplaceholder.typicode.com/posts</a>&quot;;</p>
+<p>export default function App() {
+  const [post, setPost] = React.useState(null);</p>
+<p>  React.useEffect(() =&gt; {
+    axios.get(<code>${baseURL}/1</code>).then((response) =&gt; {
+      setPost(response.data);
+    });
+  }, []);</p>
+<p>  function createPost() {
+    axios
+      .post(baseURL, {
+        title: &quot;Hello World!&quot;, 
+        body: &quot;This is a new post.&quot;
+      })
+      .then((response) =&gt; {
+        setPost(response.data);
+      });
+  }</p>
+<p>  if (!post) return &quot;No post!&quot;;
+  return (
+    <div>
+      <h1 id="posttitle">{post.title}</h1>
+      <p>{post.body}</p>
+      <button onclick="{createPost}">Create Post</button>
+    </div>
+  );
+}</p>
+<p>```</p>
+<h2 id="declartive-vs-imperative-programming">Declartive vs Imperative Programming</h2>
+<p>They are 2 different programming paradigms. </p>
+<ul>
+<li>Declarative programming: aimed at final result than the process to get there. </li>
+<li>Imperative programming: it relies on statements to directly change the state  of an application. An analogy between Declarative vs Imperative programming would be like &#x201C;saying a carpenter this is how I want my table to look like&#x201D; vs &#x201C;instructing him on each step to get your look&#x201D;. In react when we declare the DOM, we never intend to directly interact/manipulate it. We just simply change the state &amp; react processes the steps under the hood (using observers) to get there. This is one fine example of declarative programming. </li>
+</ul>
+<h2 id="reactive-rx-programming">Reactive (Rx) Programming</h2>
+<p>it works on 3 pillars:</p>
+<ul>
+<li>Observable</li>
+<li>Observers</li>
+<li>Schedulars</li>
+</ul>
+<h2 id="quick-ref">Quick Ref</h2>
+<ul>
+<li>JWT break down: header. payload. signature</li>
+<li>SSL: prevent MITM attacks.</li>
+<li>ESB: service brokering &amp; Orchestration</li>
+<li>Hoisting, Spread Operator, Event Delegation, Event Loop, Throttle/Debounce</li>
+</ul>
+<h2 id="solid-principles">SOLID Principles</h2>
+<ul>
+<li>S: Single Responsibility</li>
+<li>O: Open/Close Principle</li>
+<li>L: Liskov Substitution</li>
+<li>I: Interface Segregation</li>
+<li>D: Dependency Inversion</li>
+</ul>
 
                                 
                                 </section>
@@ -290,7 +384,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Overview","level":"3.1","depth":1,"previous":{"title":"JS String","level":"2.6","depth":1,"path":"javascript/js-string.md","ref":"javascript/js-string.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{"maxIndexSize":1000000},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"react/README.md","mtime":"2021-10-29T05:30:04.424Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-10-29T05:51:56.231Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Overview","level":"3.1","depth":1,"previous":{"title":"JS String","level":"2.6","depth":1,"path":"javascript/js-string.md","ref":"javascript/js-string.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{"maxIndexSize":1000000},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"react/README.md","mtime":"2021-11-01T04:04:59.914Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-11-01T04:08:34.349Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

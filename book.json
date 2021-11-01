@@ -1,5 +1,5 @@
 {
-  "gitbook": "3.1.2",
+  "gitbook": "3.1.1",
   "title": "Learn JS",
   "plugins": [
     "include-codeblock",

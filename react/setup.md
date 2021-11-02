@@ -12,7 +12,7 @@ npm start
 
 ## 02. Setup Libraries
 
- ### install axios & `use-axios` hook: `npm install axios use-axios-client`
+ * install axios & `use-axios` hook: `npm install axios use-axios-client`
 
  ### axios example
 ```js

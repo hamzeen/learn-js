@@ -9,8 +9,61 @@ cd react-boilerplate && npm install
 echo "SKIP_PREFLIGHT_CHECK=true" > .env && open .env
 npm start
 ```
+# List View
 
-# HTTP Calls using Axios
+```js
+    // src/components/users.js
+    import React from 'react'
+
+    const Users = ({ contacts }) => {
+      return (
+        <div>
+          <center><h1>Contact List</h1></center>
+          {contacts.map((contact) => (
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{contact.name}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{contact.email}</h6>
+                <p class="card-text">{contact.company.catchPhrase}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )
+    };
+
+    export default Users
+```
+
+```js
+    // src/App.js
+
+    import React, { Component } from 'react'
+    import Contacts from './components/contacts'
+
+    class App extends Component {
+      ...
+      
+      componentDidMount() {
+        fetch('http://jsonplaceholder.typicode.com/users')
+        .then(res => res.json())
+        .then((data) => {
+          this.setState({ contacts: data })
+        })
+        .catch(console.log)
+      }
+
+      render() {
+        return (
+          <Contacts contacts={this.state.contacts} />
+        )
+      }
+    }
+
+    export default App
+```
+
+# Setting up Axios for HTTP Calls
 
  * Using [State](https://stackblitz.com/edit/react-template-hamzeen)
 
@@ -37,8 +90,8 @@ export default function App() {
   function createPost() {
     axios
       .post(baseURL, {
-        title: "Hello World!", 
-        body: "This is a new post."
+        title: "Hello World Post", 
+        body: "new post content"
       })
       .then((response) => {
         setPost(response.data);

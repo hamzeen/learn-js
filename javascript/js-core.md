@@ -152,6 +152,7 @@ console.log("middle:: "+ extractMiddle("ABD")); // B
 
 ## 03. Title Case
 ```js
+// https://betterprogramming.pub/common-javascript-algorithm-interview-questions-explained-68d8c4186270
 function upperCaseFirst(inputStr) {
     var valueOfFirstChar = inputStr.charCodeAt(0);
 
@@ -355,8 +356,11 @@ const txtToParse = 'the {{liquid}} boils at {{temperature}} degrees celsius';
 const txtResult = interpolate(txtToParse, options);
 ```
 
-# Exceptions
-## 01. Why? 0.1 + 0.2 != 0.3
+# Misc.
+ * Why? 0.1 + 0.2 != 0.3: 
   [reason](https://javascript.plainenglish.io/why-0-1-0-2-0-3-in-javascript-d7e218224a72)
-
+* JS performance: <https://jsperf.com/>
+* beginner to intermediate [questions](https://www.edureka.co/blog/interview-questions/javascript-interview-questions/)
+* comomn [mistkaes](https://www.toptal.com/nodejs/top-10-common-nodejs-developer-mistakes) by nodejs devs
+* Variable Scopes in JS: [google's scope question](https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703)
 

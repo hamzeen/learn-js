@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Examples · Learn JS</title>
+        <title>Setup & Quick Ref · Learn JS</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -67,6 +67,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
+    
+    <link rel="next" href="boilerplate.html" />
     
     
     <link rel="prev" href="./" />
@@ -188,12 +190,25 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="implementations.html">
+        <li class="chapter active" data-level="3.2" data-path="setup.html">
             
-                <a href="implementations.html">
+                <a href="setup.html">
             
                     
-                    Examples
+                    Setup & Quick Ref
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="boilerplate.html">
+            
+                <a href="boilerplate.html">
+            
+                    
+                    Boilerplate
             
                 </a>
             
@@ -231,7 +246,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Examples</a>
+        <a href=".." >Setup & Quick Ref</a>
     </h1>
 </div>
 
@@ -246,21 +261,36 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="01-initialize-with-cra">01. Initialize with CRA</h1>
+                                <h2 id="01-initialize-with-cra">01. Initialize with CRA</h2>
 <pre class="language-"><code class="lang-sh">npx create-react-app react-boilerplate
 <span class="token builtin class-name">cd</span> react-boilerplate <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> <span class="token function">install</span>
 </code></pre>
 <pre class="language-"><code class="lang-sh"><span class="token builtin class-name">echo</span> <span class="token string">&quot;SKIP_PREFLIGHT_CHECK=true&quot;</span> <span class="token operator">&gt;</span> .env <span class="token operator">&amp;&amp;</span> <span class="token function">open</span> .env
 <span class="token function">npm</span> start
 </code></pre>
-<h1 id="02-setting-up-axios">02. Setting up Axios</h1>
-<ul>
-<li>install axios: <code>npm install axios</code></li>
-<li>examples below</li>
-<li>setting up <code>useAxios</code> Hook</li>
-</ul>
-<pre class="language-"><code class="lang-sh"><span class="token function">npm</span> <span class="token function">install</span> use-axios-client
+<h2 id="02-setup-libraries">02. Setup Libraries</h2>
+<h3 id="install-axios--use-axios-hook-npm-install-axios-use-axios-client">install axios &amp; <code>use-axios</code> hook: <code>npm install axios use-axios-client</code></h3>
+<h3 id="axios-example">axios example</h3>
+<pre class="language-"><code class="lang-js">      axios
+        <span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span>baseURL<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          title<span class="token operator">:</span> <span class="token string">&quot;Hello World Post&quot;</span><span class="token punctuation">,</span> 
+          body<span class="token operator">:</span> <span class="token string">&quot;new post content&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token function">setPost</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      axios
+        <span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://api.github.com/users/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>user<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/repos</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> 
+            <span class="token function">setRepos</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">sortData</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=&gt;</span> 
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+<h3 id="use-axios-hook-example">use-axios hook example</h3>
 <pre class="language-"><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> useAxios <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;use-axios-client&quot;</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -279,21 +309,20 @@
   <span class="token punctuation">)</span> 
 <span class="token punctuation">}</span>
 </code></pre>
-<h1 id="03-list-view">03. List View</h1>
+<h2 id="03-hitchhikers-guide">03. hitchhiker&apos;s guide</h2>
+<h3 id="iterate-an-array">iterate an array</h3>
 <pre class="language-"><code class="lang-js">    <span class="token comment">// src/components/users.js</span>
     <span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span>
 
-    <span class="token keyword">const</span> <span class="token function-variable function">Users</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> contacts <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">Users</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> users <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
       <span class="token keyword">return</span> <span class="token punctuation">(</span>
         <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-          <span class="token operator">&lt;</span>center<span class="token operator">&gt;</span><span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>Contact List<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>center<span class="token operator">&gt;</span>
-          <span class="token punctuation">{</span>contacts<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">contact</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+          <span class="token operator">&lt;</span>center<span class="token operator">&gt;</span><span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>Users List<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>center<span class="token operator">&gt;</span>
+          <span class="token punctuation">{</span>users<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">user</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
             <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;card&quot;</span><span class="token operator">&gt;</span>
-              <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;card-body&quot;</span><span class="token operator">&gt;</span>
-                <span class="token operator">&lt;</span>h5 <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;card-title&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>contact<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h5<span class="token operator">&gt;</span>
-                <span class="token operator">&lt;</span>h6 <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;card-subtitle mb-2 text-muted&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>contact<span class="token punctuation">.</span>email<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h6<span class="token operator">&gt;</span>
-                <span class="token operator">&lt;</span>p <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;card-text&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>contact<span class="token punctuation">.</span>company<span class="token punctuation">.</span>catchPhrase<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
-              <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>h5 <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;card-title&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>user<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h5<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>h6 <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;card-subtitle mb-2 text-muted&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>user<span class="token punctuation">.</span>email<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h6<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>p <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;card-text&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>user<span class="token punctuation">.</span>company<span class="token punctuation">.</span>catchPhrase<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
             <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
           <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
         <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
@@ -302,6 +331,7 @@
 
     <span class="token keyword">export</span> <span class="token keyword">default</span> Users
 </code></pre>
+<h3 id="hooks">hooks</h3>
 <pre class="language-"><code class="lang-js">    <span class="token comment">// src/App.js</span>
 
     <span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span>
@@ -309,13 +339,13 @@
 
     <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
       <span class="token keyword">const</span> <span class="token punctuation">[</span>post<span class="token punctuation">,</span> setPost<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token operator">...</span>
+      <span class="token keyword">const</span> <span class="token punctuation">[</span>contacts<span class="token punctuation">,</span> setContacts<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
       <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">&apos;http://jsonplaceholder.typicode.com/users&apos;</span><span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-          <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> contacts<span class="token operator">:</span> data <span class="token punctuation">}</span><span class="token punctuation">)</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setContacts</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span>console<span class="token punctuation">.</span>log<span class="token punctuation">)</span>
       <span class="token punctuation">}</span>
@@ -325,17 +355,6 @@
           setPost(response.data);
         });
       }, []);*/</span>
-
-      <span class="token keyword">function</span> <span class="token function">createPost</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        axios
-        <span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span>baseURL<span class="token punctuation">,</span> <span class="token punctuation">{</span>
-          title<span class="token operator">:</span> <span class="token string">&quot;Hello World Post&quot;</span><span class="token punctuation">,</span> 
-          body<span class="token operator">:</span> <span class="token string">&quot;new post content&quot;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span>
-        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-          <span class="token function">setPost</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
 
       <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token punctuation">(</span>
@@ -349,7 +368,7 @@
 
     <span class="token keyword">export</span> <span class="token keyword">default</span> App
 </code></pre>
-<h1 id="04-references">04. References</h1>
+<h1 id="04-more-reads">04. More Reads</h1>
 <ul>
 <li>Axios: <a href="https://www.freecodecamp.org/news/how-to-use-axios-with-react/" target="_blank">post</a></li>
 <li>Consuming API: <a href="https://pusher.com/tutorials/consume-restful-api-react/" target="_blank">post</a></li>
@@ -385,10 +404,14 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Overview">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Overview">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="boilerplate.html" class="navigation navigation-next " aria-label="Next page: Boilerplate">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -397,7 +420,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Examples","level":"3.2","depth":1,"previous":{"title":"Overview","level":"3.1","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"react/implementations.md","mtime":"2021-11-02T06:56:03.905Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-11-02T06:57:20.013Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Setup & Quick Ref","level":"3.2","depth":1,"next":{"title":"Boilerplate","level":"3.3","depth":1,"path":"react/boilerplate.md","ref":"react/boilerplate.md","articles":[]},"previous":{"title":"Overview","level":"3.1","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"react/setup.md","mtime":"2021-11-02T16:49:46.928Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-11-02T16:51:24.946Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -8,7 +8,9 @@
   - [JS Core](javascript/js-core.md)
   - [Concepts](javascript/concepts.md)
 
+
 ## React
   - [Overview](react/README.md)
-  - [Examples](react/implementations.md)
-  
+  - [Setup & Quick Ref](react/setup.md)
+  - [Boilerplate](react/boilerplate.md)
+

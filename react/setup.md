@@ -1,4 +1,4 @@
-# 01. Initialize with CRA
+## 01. Initialize with CRA
 
 ```sh
 npx create-react-app react-boilerplate
@@ -10,15 +10,33 @@ echo "SKIP_PREFLIGHT_CHECK=true" > .env && open .env
 npm start
 ```
 
-# 02. Setting up Axios
+## 02. Setup Libraries
 
- * install axios: `npm install axios`
- * examples below
- * setting up `useAxios` Hook
+ ### install axios & `use-axios` hook: `npm install axios use-axios-client`
 
-```sh
-npm install use-axios-client
+ ### axios example
+```js
+      axios
+        .post(baseURL, {
+          title: "Hello World Post", 
+          body: "new post content"
+        })
+        .then((response) => {
+          setPost(response.data);
+        })
+        .catch(error => {
+            console.log(error)
+        });
+
+      axios
+        .get(`https://api.github.com/users/${user}/repos`)
+        .then(response => 
+            setRepos(this.sortData(response.data)))
+        .catch(error => 
+            console.log(error));
 ```
+ ### use-axios hook example
+
 ```js
 import { useAxios } from "use-axios-client";
 
@@ -39,23 +57,22 @@ export default function App() {
 }
 ```
 
-# 03. List View
+## 03. hitchhiker's guide
 
+ ### iterate an array
 ```js
     // src/components/users.js
     import React from 'react'
 
-    const Users = ({ contacts }) => {
+    const Users = ({ users }) => {
       return (
         <div>
-          <center><h1>Contact List</h1></center>
-          {contacts.map((contact) => (
+          <center><h1>Users List</h1></center>
+          {users.map((user) => (
             <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">{contact.name}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">{contact.email}</h6>
-                <p class="card-text">{contact.company.catchPhrase}</p>
-              </div>
+                <h5 class="card-title">{user.name}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{user.email}</h6>
+                <p class="card-text">{user.company.catchPhrase}</p>
             </div>
           ))}
         </div>
@@ -65,6 +82,7 @@ export default function App() {
     export default Users
 ```
 
+ ### hooks
 ```js
     // src/App.js
 
@@ -73,13 +91,13 @@ export default function App() {
 
     class App extends Component {
       const [post, setPost] = React.useState(null);
-      ...
+      const [contacts, setContacts] = React.useState([]);
       
       componentDidMount() {
         fetch('http://jsonplaceholder.typicode.com/users')
         .then(res => res.json())
         .then((data) => {
-          this.setState({ contacts: data })
+          this.setContacts(data)
         })
         .catch(console.log)
       }
@@ -89,17 +107,6 @@ export default function App() {
           setPost(response.data);
         });
       }, []);*/
-
-      function createPost() {
-        axios
-        .post(baseURL, {
-          title: "Hello World Post", 
-          body: "new post content"
-        })
-        .then((response) => {
-          setPost(response.data);
-        });
-      }
 
       render() {
         return (
@@ -115,7 +122,7 @@ export default function App() {
 ```
 
 
-# 04. References
+# 04. More Reads
 
  * Axios: [post](https://www.freecodecamp.org/news/how-to-use-axios-with-react/)
  * Consuming API: [post](https://pusher.com/tutorials/consume-restful-api-react/)

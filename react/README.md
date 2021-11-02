@@ -1,6 +1,6 @@
 # Overview React.js
 
-Welcome to reactive programming! React.JS is an open-source fron-end library developed by Facebook.
+React.JS is an open-source fron-end library developed by Facebook.
 It was initially made for 3 things:
  * DOM Manipulation
  * Component Management

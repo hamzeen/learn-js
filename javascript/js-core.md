@@ -20,7 +20,11 @@
  const aryX = new Array(8).fill({name: 'labs'}).map((el, idx ) => 
  ({...el, combine: `name: ${el.name} id: ${idx}`, id: idx}));
 
+ // ensures an array without null objs
  const ar2 = aryX.filter(Boolean).map((obj) => obj.id);
+
+ // unique array
+ let unique = [...new Set(items)];
 
  // pagination: pages
  Math.ceil(total_items/limit);

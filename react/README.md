@@ -26,6 +26,7 @@ while in React Native, native APIs are used to render components in mobile.
 npx create-react-app react-boilerplate
 cd react-boilerplate && npm install
 ```
+
 ```sh
 echo "SKIP_PREFLIGHT_CHECK=true" > .env && open .env
 npm start
@@ -37,7 +38,7 @@ npm start
 
  * install axios: `npm install axios`
 
- * import & usage:
+
 ```js
 import axios from "axios";
 import React from "react";
@@ -73,7 +74,6 @@ export default function App() {
     </div>
   );
 }
-
 ```
 
 

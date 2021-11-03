@@ -14,3 +14,10 @@
   - [Setup & Quick Ref](react/setup.md)
   - [Boilerplate](react/boilerplate.md)
 
+
+## DSA
+  - [overview](DSA/REDAME.md)
+  - [unique substrings](DSA/unique-substrs.md)
+  - [balanced brackets](DSA/balanced-brackets.md)
+  - [inflight movies](DSA/inflight-movies.md)
+

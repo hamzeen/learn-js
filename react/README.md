@@ -40,7 +40,7 @@ it works on 3 pillars:
  * JWT break down: header. payload. signature
  * SSL: prevent MITM attacks.
  * ESB: service brokering & Orchestration
- * Microservices: 
+ * Microservices: variant of SOA strucutural style. arranges an application asa a loosely coupled services.
  * Hoisting, Spread Operator, Event Delegation, Event Loop, Throttle/Debounce
 
 

@@ -3,6 +3,10 @@
 
  * Hoisting, Event Loop
 
+## DB Transaction
+unit of work that's completed or undone as a unit.
+
+
 ## 01. destructuring
 ```
 const user = {name: 'bertha benz', age: 28, city: 'budapest'}

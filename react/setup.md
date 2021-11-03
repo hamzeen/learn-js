@@ -12,9 +12,15 @@ npm start
 
 ## 02. Setup Libraries
 
- * install axios & `use-axios` hook: `npm install axios use-axios-client`
+Axios is a promise based http client library. it's ismerphic works on node js backend as well as front-end projects.
+in the front-end uses xmlhttp reqeust. You can use use-axios for syntactic sugar in React.js projects.
 
- ### axios example
+```sh
+npm install axios use-axios-client
+```  
+
+
+### axios example
 ```js
       axios
         .post(baseURL, {
@@ -35,7 +41,9 @@ npm start
         .catch(error => 
             console.log(error));
 ```
- ### use-axios hook example
+
+
+### use-axios hook example
 
 ```js
 import { useAxios } from "use-axios-client";
@@ -120,7 +128,8 @@ export default function App() {
 
     export default App
 ```
-
+ ### prevent re-renders on functional comps
+`const factorial = useMemo(() => factorialOf(number), [number]);`
 
 # 04. More Reads
 

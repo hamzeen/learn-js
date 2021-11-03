@@ -7,6 +7,7 @@ _By_ [_@hamzeen_](https://twitter.com/hamzeen)
 
 # Build
   * npm install
-  * npm install gitbook-cli -g
-  * npm install gitbook-cli --save-dev
+  * [OPTIONAL] npm install gitbook-cli -g
+  * [OPTIONAL] npm install gitbook-cli --save-dev
   * npx gitbook install
+  * npm run gb

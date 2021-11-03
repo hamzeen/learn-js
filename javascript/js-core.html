@@ -218,6 +218,65 @@
     
 
     
+        
+        <li class="header">DSA</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../DSA/REDAME.md">
+            
+                <span>
+            
+                    
+                    overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../DSA/unique-substrs.html">
+            
+                <a href="../DSA/unique-substrs.html">
+            
+                    
+                    unique substrings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../DSA/balanced-brackets.html">
+            
+                <a href="../DSA/balanced-brackets.html">
+            
+                    
+                    balanced brackets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../DSA/inflight-movies.html">
+            
+                <a href="../DSA/inflight-movies.html">
+            
+                    
+                    inflight movies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class="divider"></li>
 
@@ -262,7 +321,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="js-core">JS CORE</h1>
-<h1 id="helprs-isnumeric--isobject--array-of-8">Helprs: isNumeric | isObject | array of 8</h1>
+<h1 id="helpers-isnumeric--isobject--array-of-8">Helpers: isNumeric | isObject | array of 8</h1>
 <pre class="language-"><code class="lang-js"> <span class="token comment">// isNumeric</span>
  <span class="token keyword">function</span> <span class="token function">isNumeric</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token operator">!</span><span class="token function">isNaN</span><span class="token punctuation">(</span><span class="token function">parseFloat</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">isFinite</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -291,8 +350,15 @@
  Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span>total_items<span class="token operator">/</span>limit<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h1 id="sorting">Sorting</h1>
-<h2 id="1-a-weird-sort-norway">1. a Weird Sort (Norway)</h2>
-<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">sort</span><span class="token punctuation">(</span><span class="token parameter">sample_input</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h2 id="1-basic">1. Basic</h2>
+<pre class="language-"><code>    return data.sort().reverse(); // for performance
+    return data.sort((a, b) =&gt; b.name.localeCompare(a.name)); // for unicode
+    return data.sort((a, b) =&gt; (a.name  - b.name)).reverse(); // otherwise
+</code></pre><h2 id="2-a-weird-sort-wwwno">2. a weird sort (www.*.no)</h2>
+<pre class="language-"><code class="lang-js"><span class="token comment">// const sample_input =  [&apos;world&apos;, &apos;4&apos;, &apos;hello&apos;, &apos;2&apos;, &apos;3&apos;, &apos;1&apos;, &apos;coding&apos;, &apos;test&apos;];</span>
+<span class="token comment">// expected_output =&gt; [&apos;coding&apos;, &apos;1&apos;, &apos;hello&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;test&apos;, &apos;world&apos;];</span>
+
+<span class="token keyword">function</span> <span class="token function">sort</span><span class="token punctuation">(</span><span class="token parameter">sample_input</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> aryNums <span class="token operator">=</span> sample_input<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">el</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> el <span class="token operator">&amp;&amp;</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
   aryNums<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -314,10 +380,8 @@
   <span class="token punctuation">}</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span class="token comment">// const sample_input =  [&apos;world&apos;, &apos;4&apos;, &apos;hello&apos;, &apos;2&apos;, &apos;3&apos;, &apos;1&apos;, &apos;coding&apos;, &apos;test&apos;];</span>
-<span class="token comment">// expected_output =&gt; [&apos;coding&apos;, &apos;1&apos;, &apos;hello&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;test&apos;, &apos;world&apos;];</span>
 </code></pre>
-<h2 id="2-group--sort">2. Group &amp; Sort</h2>
+<h2 id="3-group--sort">3. Group &amp; Sort</h2>
 <pre class="language-"><code class="lang-js"><span class="token keyword">var</span> ary <span class="token operator">=</span> <span class="token punctuation">[</span>
   <span class="token punctuation">{</span>
     active<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
@@ -636,7 +700,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"JS Core","level":"2.2","depth":1,"next":{"title":"Concepts","level":"2.3","depth":1,"path":"javascript/concepts.md","ref":"javascript/concepts.md","articles":[]},"previous":{"title":"Overview","level":"2.1","depth":1,"path":"javascript/README.md","ref":"javascript/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"javascript/js-core.md","mtime":"2021-11-02T16:55:14.432Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-11-02T16:58:24.692Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JS Core","level":"2.2","depth":1,"next":{"title":"Concepts","level":"2.3","depth":1,"path":"javascript/concepts.md","ref":"javascript/concepts.md","articles":[]},"previous":{"title":"Overview","level":"2.1","depth":1,"path":"javascript/README.md","ref":"javascript/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"javascript/js-core.md","mtime":"2021-11-03T04:46:37.343Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-11-03T04:48:25.279Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

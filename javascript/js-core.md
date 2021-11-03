@@ -1,6 +1,6 @@
 # JS CORE
 
-# Helprs: isNumeric | isObject | array of 8
+# Helpers: isNumeric | isObject | array of 8
 ```js
  // isNumeric
  function isNumeric(n) {
@@ -32,8 +32,19 @@
 
 
 # Sorting
-## 1. a Weird Sort (Norway)
+
+## 1. Basic
+```
+    return data.sort().reverse(); // for performance
+    return data.sort((a, b) => b.name.localeCompare(a.name)); // for unicode
+    return data.sort((a, b) => (a.name  - b.name)).reverse(); // otherwise
+```
+
+## 2. a weird sort (www.*.no)
 ```js
+// const sample_input =  ['world', '4', 'hello', '2', '3', '1', 'coding', 'test'];
+// expected_output => ['coding', '1', 'hello', '2', '3', '4', 'test', 'world'];
+
 function sort(sample_input) {
   const aryNums = sample_input.filter((el)=> el && parseInt(el));  
   aryNums.sort();
@@ -56,11 +67,9 @@ function sort(sample_input) {
   }
   console.log(res);
 }
-// const sample_input =  ['world', '4', 'hello', '2', '3', '1', 'coding', 'test'];
-// expected_output => ['coding', '1', 'hello', '2', '3', '4', 'test', 'world'];
 
 ```
-## 2. Group & Sort
+## 3. Group & Sort
 ```js
 var ary = [
   {

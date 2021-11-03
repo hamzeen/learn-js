@@ -16,7 +16,7 @@
 
 
 ## DSA
-  - [overview](DSA/REDAME.md)
+  - [overview](DSA/README.md)
   - [unique substrings](DSA/unique-substrs.md)
   - [balanced brackets](DSA/balanced-brackets.md)
   - [inflight movies](DSA/inflight-movies.md)

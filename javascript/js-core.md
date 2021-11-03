@@ -38,6 +38,12 @@
     return data.sort().reverse(); // for performance
     return data.sort((a, b) => b.name.localeCompare(a.name)); // for unicode
     return data.sort((a, b) => (a.name  - b.name)).reverse(); // otherwise
+
+    // parse a string & then sort
+    const str = '[{"name":"eggs","price":1},{"name":"coffee","price":9.99},{"name":"rice","price":4.04}]';
+    const obj = JSON.parse(str);
+    obj.sort((a, b) => a.price - b.price);
+
 ```
 
 ## 2. a weird sort (www.*.no)

@@ -30,6 +30,17 @@
  Math.ceil(total_items/limit);
 ```
 
+# Questions
+```js
+// [google's scope question](https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703)
+// here use, let
+for(var i=0;i<5;i++) {
+  setTimeout(() =>{ 
+    console.log("let:", i)
+  }, 1000);
+}
+
+```
 
 # Sorting
 
@@ -381,5 +392,4 @@ const txtResult = interpolate(txtToParse, options);
 * JS performance: <https://jsperf.com/>
 * beginner to intermediate [questions](https://www.edureka.co/blog/interview-questions/javascript-interview-questions/)
 * comomn [mistkaes](https://www.toptal.com/nodejs/top-10-common-nodejs-developer-mistakes) by nodejs devs
-* Variable Scopes in JS: [google's scope question](https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703)
 

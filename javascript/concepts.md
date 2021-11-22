@@ -6,6 +6,24 @@
 ## DB Transaction
 unit of work that's completed or undone as a unit.
 
+## Asyn/Await vs Promises
+```js
+var p1 = new Promise(function(resolve, reject) {
+	setTimeout(function() { resolve('First!'); }, 8000);
+});
+var p2 = new Promise(function(resolve, reject) {
+	setTimeout(function() { reject('Second!'); }, 6000);
+});
+Promise.all([p1, p2]).then(function(results) {
+	console.log('Resolved: ', results);
+}).catch(function(err) {
+	console.log('Catch: ', err);
+});
+
+// From the console:
+// Catch: Second!
+```
+
 
 ## 01. destructuring
 ```

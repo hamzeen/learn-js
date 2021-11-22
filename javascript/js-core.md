@@ -30,7 +30,7 @@
  Math.ceil(total_items/limit);
 ```
 
-# Questions
+# Scope in JS
 ```js
 // [google's scope question](https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703)
 // here use, let

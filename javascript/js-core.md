@@ -57,6 +57,19 @@ for(var i=0;i<5;i++) {
 
 ```
 
+## 2. find missing number
+```js
+var a = [5], n = 5;
+var missing = [];
+for (var i = 1; i <= n; i++) {
+  if (a.indexOf(i) == -1) {
+    missing.push(i);
+  }
+}
+console.log(missing);
+```
+
+
 ## 2. a weird sort (www.*.no)
 ```js
 // const sample_input =  ['world', '4', 'hello', '2', '3', '1', 'coding', 'test'];

@@ -11,6 +11,11 @@ It was initially made for 3 things:
  * useContext)
  * useEffects() | componentDidMount, componentDidUpdate, and componentWillUnmount
 
+## Survivial kit
+* Unit tests (watch mode): npm run test:unit -- --watch | Press P
+* FIX LINT: npm run lint:prettier -- --write
+* Tools: JEST/ MOCHA , testing-library chrome add-on
+
 
 ## Techniques to improve performance
 * 1.Use React.Suspense and React.Lazy for Lazy Loading Components
@@ -34,19 +39,18 @@ const LabComponent = React.memo(props =>  {
 });
 ```
 
-## some basic concepts
+## Virtual DOM
+ * Observable: detetcts prop /state change
+ * Diff Algo: compares the versions of virtual DOM then 
+ * makes sure batched updates are sent to real DOM for repainting/ re-rendering the UI.
 
- * virtual DOM
-React uses virtual DOM to enhance its performance. It uses the observable to detect state and prop changes. React uses an efficient diff algorithm to compare the versions of virtual DOM. It then makes sure that batched updates are sent to the real DOM for repainting or re-rendering of the UI.
-
- * PROPS vs STATE
+## PROPS vs STATE
 The state is a data structure that starts with a default value when a Component mounts. It may be mutated across time, mostly as a result of user events.
 Props (short for properties) are a Component’s configuration. Props are how components talk to each other. They are received from above component and immutable as far as the Component receiving them is concerned.
 
- * React vs React Native
+## React vs React Native
 In Reactjs, virtual DOM is used to render browser code in Reactjs  
 while in React Native, native APIs are used to render components in mobile.
-
 
 
 ## Declartive vs Imperative Programming
@@ -57,10 +61,7 @@ They are 2 different programming paradigms.
 
 
 ## Reactive (Rx) Programming
-it works on 3 pillars:
- * Observable
- * Observers
- * Schedulars
+it works on 3 pillars: `Observable | Observers | Schedulars`
 
 
 ## Quick Ref
@@ -68,4 +69,5 @@ it works on 3 pillars:
  * SSL: prevent MITM attacks.
  * ESB: service brokering & Orchestration
  * Microservices: variant of SOA strucutural style. arranges an application asa a loosely coupled services.
-
+ * OOP: Abstraction, Inheritance, Encapsulation, Ploymorphism
+ * For in ... (enumaerates keys)... | For of ... (values)

@@ -16,9 +16,6 @@
   return (Object.keys(obj).length) === 0;
  }
 
- // array with 8 objects
- const aryX = new Array(8).fill({name: 'labs'}).map((el, idx ) => 
- ({...el, combine: `name: ${el.name} id: ${idx}`, id: idx}));
 
  // ensures an array without null objs
  const ar2 = aryX.filter(Boolean).map((obj) => obj.id);
@@ -31,14 +28,15 @@
 ```
 
 # Scope in JS
+Scopes in JS include, block scope & global scope.
+
 ```js
 // [google's scope question](https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703)
-// here use, let
-for(var i=0;i<5;i++) {
-  setTimeout(() =>{ 
-    console.log("let:", i)
+for(var i = 0; i < 5; i++) {
+  setTimeout(() => { 
+    console.log("var:", i)
   }, 1000);
-}
+} // use 'let' instead
 
 ```
 

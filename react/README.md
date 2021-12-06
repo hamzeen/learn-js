@@ -6,6 +6,33 @@ It was initially made for 3 things:
  * Component Management
  * State Management
 
+## Common Hooks in React.js:
+ * useState()
+ * useContext)
+ * useEffects() | componentDidMount, componentDidUpdate, and componentWillUnmount
+
+
+## Techniques to improve performance
+* 1.Use React.Suspense and React.Lazy for Lazy Loading Components
+* 2.Use React.memo for Component Memoization
+* 3.Virtualize a Large List Using react-window
+* 4.Don't forget to use production build
+* 5.Use React.Fragment to Avoid Adding Extra Nodes to the DOM
+
+
+## React.memo
+React.memo is a great way of optimizing performance as it helps cache functional components.  
+In the React World, functions are the `functional components`, & arguments are `props`.
+
+React.memo is a higher-order component and it’s similar to React.PureComponent but for using function components instead of classes. Example:
+
+```js
+import React from 'react';
+
+const LabComponent = React.memo(props =>  {
+  /* render only if the props changed */
+});
+```
 
 ## some basic concepts
 
@@ -37,18 +64,8 @@ it works on 3 pillars:
 
 
 ## Quick Ref
- * JWT break down: header. payload. signature
+ * JWT: header. payload. signature
  * SSL: prevent MITM attacks.
  * ESB: service brokering & Orchestration
  * Microservices: variant of SOA strucutural style. arranges an application asa a loosely coupled services.
- * Hoisting, Spread Operator, Event Delegation, Event Loop, Throttle/Debounce
-
-
-## SOLID Principles
- * S: Single Responsibility
- * O: Open/Close Principle
- * L: Liskov Substitution
- * I: Interface Segregation
- * D: Dependency Inversion
-
 

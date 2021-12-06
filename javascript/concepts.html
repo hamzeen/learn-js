@@ -372,13 +372,38 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="concepts">Concepts</h1>
+                                <h1 id="1-concepts">1. Concepts</h1>
+<h2 id="11-hoisting">1.1. Hoisting</h2>
+<p>In JavaScript, Hoisting is the default behavior of moving all the declarations at the top of the scope before code execution. It gives the advantage no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local.</p>
+<p>This is okay:</p>
+<pre class="language-"><code class="lang-js">a <span class="token operator">=</span> <span class="token string">&quot;Volvo&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> a<span class="token punctuation">;</span> <span class="token comment">// &apos;Volvo&apos;</span>
+</code></pre>
+<p>But not this:</p>
+<pre class="language-"><code class="lang-js">b <span class="token operator">=</span> <span class="token string">&quot;Volvo&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> b<span class="token punctuation">;</span> <span class="token comment">// Uncaught SyntaxError: Missing initializer in const declaration</span>
+
+c <span class="token operator">=</span> <span class="token string">&quot;Volvo&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> c<span class="token punctuation">;</span>
+</code></pre>
 <ul>
-<li>Hoisting, Event Loop</li>
+<li>Note: JavaScript in strict mode does not allow variables to be used if they are not declared. <code>use strict</code></li>
 </ul>
-<h2 id="db-transaction">DB Transaction</h2>
-<p>unit of work that&apos;s completed or undone as a unit.</p>
-<h2 id="asynawait-vs-promises">Asyn/Await vs Promises</h2>
+<h2 id="12-destructuring">1.2. destructuring</h2>
+<pre class="language-"><code>const user = {name: &apos;bertha benz&apos;, age: 28, city: &apos;budapest&apos;}
+const {name, age, city} = user;
+</code></pre><h2 id="13-spread-operator">1.3. Spread operator</h2>
+<p>it presents a neat alternative to most array functions like:<br><code>unshift()</code>, <code>shift()</code>, <code>pop()</code>, <code>concat()</code></p>
+<pre class="language-"><code class="lang-js"> <span class="token comment">// array with 8 objects</span>
+ <span class="token keyword">const</span> aryX <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">{</span>name<span class="token operator">:</span> <span class="token string">&apos;labs&apos;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">el<span class="token punctuation">,</span> idx</span> <span class="token punctuation">)</span> <span class="token operator">=&gt;</span> 
+ <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token operator">...</span>el<span class="token punctuation">,</span> combine<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">name: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>el<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> id: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>idx<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> id<span class="token operator">:</span> idx<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="14-reference-vs-pass-by-value">1.4. Reference vs Pass by Value</h2>
+<p>all primitive types are pass by value; others are pass by reference.</p>
+<pre class="language-"><code>const a = {} != const b = {};
+</code></pre><h2 id="15-event-loop">1.5. Event Loop</h2>
+<h2 id="16-asynchronous-js">1.6. Asynchronous JS</h2>
+<h3 id="asynawait-vs-promises">Asyn/Await vs Promises</h3>
 <pre class="language-"><code class="lang-js"><span class="token keyword">var</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&apos;First!&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">8000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -394,32 +419,38 @@ Promise<span class="token punctuation">.</span><span class="token function">all<
 <span class="token comment">// From the console:</span>
 <span class="token comment">// Catch: Second!</span>
 </code></pre>
-<h2 id="01-destructuring">01. destructuring</h2>
-<pre class="language-"><code>const user = {name: &apos;bertha benz&apos;, age: 28, city: &apos;budapest&apos;}
-const {name, age, city} = user;
-</code></pre><h2 id="02-debounce-vs-throttling">02. debounce vs throttling</h2>
-<h2 id="03-spread-operator">03. Spread operator</h2>
-<h2 id="04-pass-by-reference-vs-pass-by-value">04. Pass by reference vs Pass by Value</h2>
-<p>all primitive types are pass by value; others are pass by reference.</p>
-<pre class="language-"><code>const a = {} != const b = {};
-</code></pre><h2 id="05-nullish-coalescing">05. Nullish coalescing</h2>
+<h2 id="18-debounce-vs-throttling">1.8. debounce vs throttling</h2>
+<h2 id="19-nullish-coalescing">1.9. Nullish coalescing</h2>
 <p>this (??) is a logical operator that returns its right-hand side operand 
 when its left-hand side operand is null or undefined.</p>
 <pre class="language-"><code>const foo = null ?? &apos;default string&apos;;
 console.log(foo); // &apos;default string&apos;
 const baz = 0 ?? &apos;default string&apos;;
 console.log(baz); // 0
-</code></pre><h2 id="06-events">06. Events</h2>
+</code></pre><h2 id="110-event-delegation">1.10. Event Delegation</h2>
+<h2 id="111-events">1.11. Events</h2>
 <h3 id="onload-oncontentchecked--documentready">onload(), onContentChecked() &amp; $(document).ready()</h3>
-<p>onContentChecked() event occurs after the HTML document has been loaded 
-(i.e. DOM hierarchy has been fully constructed). </p>
-<p>The DOMContentLoaded event is fired when the document has been completely loaded and parsed, 
-without waiting for stylesheets, images, and subframes.<br>The onload() event occurs when the documetn and all its resources all loaded.  </p>
-<p>$(document).ready() event is jQuery equivalent to DOMContentLoaded</p>
-<pre class="language-"><code>$(document).ready(function() {
-   console.log( &quot;ready!&quot; );
-});
+<p>The onload() event occurs when the document and all its resources are loaded.</p>
+<p>onContentChecked() event occurs after DOM hierarchy has been fully constructed. 
+This event is fired when the document has been completely loaded &amp; parsed, 
+without waiting for stylesheets, images and subframes. <code>$(document).ready()</code> 
+event is jQuery equivalent to <code>DOMContentLoaded</code></p>
+<pre class="language-"><code class="lang-js"><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token string">&quot;ready!&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+<h1 id="2-design">2. Design</h1>
+<h2 id="solid-principles">SOLID Principles</h2>
+<ul>
+<li>S: Single Responsibility</li>
+<li>O: Open/Close Principle</li>
+<li>L: Liskov Substitution</li>
+<li>I: Interface Segregation</li>
+<li>D: Dependency Inversion</li>
+</ul>
+<h2 id="db-transaction">DB Transaction</h2>
+<p>unit of work that&apos;s completed or undone as a unit.</p>
+
                                 
                                 </section>
                             
@@ -446,7 +477,7 @@ without waiting for stylesheets, images, and subframes.<br>The onload() event oc
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Concepts","level":"2.3","depth":1,"next":{"title":"Overview","level":"3.1","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[]},"previous":{"title":"JS Core","level":"2.2","depth":1,"path":"javascript/js-core.md","ref":"javascript/js-core.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{"maxIndexSize":1000000},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"javascript/concepts.md","mtime":"2021-11-22T08:35:42.442Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-11-22T08:38:56.840Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Concepts","level":"2.3","depth":1,"next":{"title":"Overview","level":"3.1","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[]},"previous":{"title":"JS Core","level":"2.2","depth":1,"path":"javascript/js-core.md","ref":"javascript/js-core.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{"maxIndexSize":1000000},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"javascript/concepts.md","mtime":"2021-12-06T09:31:25.812Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-12-06T09:34:51.175Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

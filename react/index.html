@@ -380,6 +380,29 @@ It was initially made for 3 things:</p>
 <li>Component Management</li>
 <li>State Management</li>
 </ul>
+<h2 id="common-hooks-in-reactjs">Common Hooks in React.js:</h2>
+<ul>
+<li>useState()</li>
+<li>useContext)</li>
+<li>useEffects() | componentDidMount, componentDidUpdate, and componentWillUnmount</li>
+</ul>
+<h2 id="techniques-to-improve-performance">Techniques to improve performance</h2>
+<ul>
+<li>1.Use React.Suspense and React.Lazy for Lazy Loading Components</li>
+<li>2.Use React.memo for Component Memoization</li>
+<li>3.Virtualize a Large List Using react-window</li>
+<li>4.Don&apos;t forget to use production build</li>
+<li>5.Use React.Fragment to Avoid Adding Extra Nodes to the DOM</li>
+</ul>
+<h2 id="reactmemo">React.memo</h2>
+<p>React.memo is a great way of optimizing performance as it helps cache functional components.<br>In the React World, functions are the <code>functional components</code>, &amp; arguments are <code>props</code>.</p>
+<p>React.memo is a higher-order component and it&#x2019;s similar to React.PureComponent but for using function components instead of classes. Example:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> LabComponent <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">memo</span><span class="token punctuation">(</span><span class="token parameter">props</span> <span class="token operator">=&gt;</span>  <span class="token punctuation">{</span>
+  <span class="token comment">/* render only if the props changed */</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <h2 id="some-basic-concepts">some basic concepts</h2>
 <ul>
 <li><p>virtual DOM
@@ -408,19 +431,10 @@ In Reactjs, virtual DOM is used to render browser code in Reactjs<br>while in Re
 </ul>
 <h2 id="quick-ref">Quick Ref</h2>
 <ul>
-<li>JWT break down: header. payload. signature</li>
+<li>JWT: header. payload. signature</li>
 <li>SSL: prevent MITM attacks.</li>
 <li>ESB: service brokering &amp; Orchestration</li>
 <li>Microservices: variant of SOA strucutural style. arranges an application asa a loosely coupled services.</li>
-<li>Hoisting, Spread Operator, Event Delegation, Event Loop, Throttle/Debounce</li>
-</ul>
-<h2 id="solid-principles">SOLID Principles</h2>
-<ul>
-<li>S: Single Responsibility</li>
-<li>O: Open/Close Principle</li>
-<li>L: Liskov Substitution</li>
-<li>I: Interface Segregation</li>
-<li>D: Dependency Inversion</li>
 </ul>
 
                                 
@@ -449,7 +463,7 @@ In Reactjs, virtual DOM is used to render browser code in Reactjs<br>while in Re
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Overview","level":"3.1","depth":1,"next":{"title":"Setup & Quick Ref","level":"3.2","depth":1,"path":"react/setup.md","ref":"react/setup.md","articles":[]},"previous":{"title":"Concepts","level":"2.3","depth":1,"path":"javascript/concepts.md","ref":"javascript/concepts.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{"maxIndexSize":1000000},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"react/README.md","mtime":"2021-11-22T08:32:35.094Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-11-22T08:38:56.840Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Overview","level":"3.1","depth":1,"next":{"title":"Setup & Quick Ref","level":"3.2","depth":1,"path":"react/setup.md","ref":"react/setup.md","articles":[]},"previous":{"title":"Concepts","level":"2.3","depth":1,"path":"javascript/concepts.md","ref":"javascript/concepts.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{"maxIndexSize":1000000},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"react/README.md","mtime":"2021-12-06T09:30:36.798Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-12-06T09:34:51.175Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

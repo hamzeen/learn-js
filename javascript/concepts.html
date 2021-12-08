@@ -449,14 +449,47 @@ event is jQuery equivalent to <code>DOMContentLoaded</code></p>
 <h1 id="2-design">2. Design</h1>
 <h2 id="solid-principles">SOLID Principles</h2>
 <ul>
-<li>S: Single Responsibility</li>
-<li>O: Open/Close Principle</li>
+<li>S: Single Responsibility<ul>
+<li>class should have only one reason to change.</li>
+</ul>
+</li>
+<li>O: Open/Close Principle<ul>
+<li>software entities (classes, modules, methods, etc.) should be open for extension, but closed for modification</li>
+</ul>
+</li>
 <li>L: Liskov Substitution</li>
 <li>I: Interface Segregation</li>
-<li>D: Dependency Inversion</li>
+<li>D: Dependency Inversion<ul>
+<li>high level modules should not depend on low level modules; both should depend on abstractions. Abstractions should not depend on details.  Details should depend upon abstractions.</li>
 </ul>
-<h2 id="db-transaction">DB Transaction</h2>
-<p>unit of work that&apos;s completed or undone as a unit.</p>
+</li>
+</ul>
+<h2 id="quick-ref">Quick Ref:</h2>
+<ul>
+<li>JWT: header. payload. signature</li>
+<li>ESB: service brokering &amp; Orchestration</li>
+<li>OOP: Abstraction, Inheritance, Encapsulation, Ploymorphism</li>
+<li>Angular: 2-way binding; React: 1-way binding</li>
+<li>TDD: react - Jest, Mocha; Angular - jasmine</li>
+</ul>
+<h1 id="3-css--scss">3. CSS / SCSS</h1>
+<ul>
+<li>Mixin: re-use styles. ex: horizontal-list</li>
+<li>Mixin: Nesting Selectors, Inheritance Selectors</li>
+<li>Frameworks Bootstrap, Tailwind</li>
+</ul>
+<h1 id="4-databases--backend">4. Databases / Backend</h1>
+<ul>
+<li>DB Transaction: unit of work that&apos;s completed or undone as a unit.</li>
+<li>Http verbs Put vs Patch</li>
+</ul>
+<h1 id="5-backend">5. Backend</h1>
+<ul>
+<li>Microservices: arranges an app into loosely coupled services. Variant of SOA structual style.</li>
+<li>Micro Front-ends: organizes an front-end into loosely coupled modules.</li>
+<li>SSL: prevent MITM attacks</li>
+<li>HTTPS: makes a secure connection by establshing an <em>encrypted link</em> between the browser &amp; the server or between 2 systems.</li>
+</ul>
 
                                 
                                 </section>
@@ -500,7 +533,7 @@ event is jQuery equivalent to <code>DOMContentLoaded</code></p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Concepts","level":"2.3","depth":1,"next":{"title":"Overview","level":"3.1","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[]},"previous":{"title":"JS Core","level":"2.2","depth":1,"path":"javascript/js-core.md","ref":"javascript/js-core.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"javascript/concepts.md","mtime":"2021-12-07T05:43:47.617Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-12-07T05:47:20.913Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Concepts","level":"2.3","depth":1,"next":{"title":"Overview","level":"3.1","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[]},"previous":{"title":"JS Core","level":"2.2","depth":1,"path":"javascript/js-core.md","ref":"javascript/js-core.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"javascript/concepts.md","mtime":"2021-12-08T09:17:34.663Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-12-08T09:25:11.817Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

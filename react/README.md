@@ -6,15 +6,21 @@ It was initially made for 3 things:
  * Component Management
  * State Management
 
+
 ## Common Hooks in React.js:
  * useState()
  * useContext)
  * useEffects() | componentDidMount, componentDidUpdate, and componentWillUnmount
 
-## Survivial kit
+
+## Survival kit
 * Unit tests (watch mode): npm run test:unit -- --watch | Press P
 * FIX LINT: npm run lint:prettier -- --write
 * Tools: JEST/ MOCHA , testing-library chrome add-on
+
+
+## Flux > Redux
+* state container - manage states in an SPA. single source of truth.
 
 
 ## Techniques to improve performance

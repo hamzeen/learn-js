@@ -20,7 +20,7 @@ npm install axios use-axios-client
 ```  
 
 
-### axios example
+### 2.1. axios example
 ```js
       axios
         .post(baseURL, {
@@ -43,7 +43,7 @@ npm install axios use-axios-client
 ```
 
 
-### use-axios hook example
+### 2.2. use-axios hook example
 
 ```js
 import { useAxios } from "use-axios-client";
@@ -67,7 +67,7 @@ export default function App() {
 
 ## 03. hitchhiker's guide
 
- ### iterate an array
+### 3.1. iterate an array
 ```js
     // src/components/users.js
     import React from 'react'
@@ -90,7 +90,7 @@ export default function App() {
     export default Users
 ```
 
- ### hooks
+### 3.2. Hooks
 ```js
     // src/App.js
 
@@ -128,7 +128,8 @@ export default function App() {
 
     export default App
 ```
- ### prevent re-renders on functional comps
+
+### 3.3. prevent re-renders on functional comps
 `const factorial = useMemo(() => factorialOf(number), [number]);`
 
 # 04. More Reads

@@ -114,6 +114,7 @@ $(document).ready(function() {
  * OOP: Abstraction, Inheritance, Encapsulation, Ploymorphism
  * Angular: 2-way binding; React: 1-way binding
  * TDD: react - Jest, Mocha; Angular - jasmine
+ * pre-processors: PHP, SCSS
 
 
 # 3. CSS / SCSS

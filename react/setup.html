@@ -391,7 +391,7 @@
 in the front-end uses xmlhttp reqeust. You can use use-axios for syntactic sugar in React.js projects.</p>
 <pre class="language-"><code class="lang-sh"><span class="token function">npm</span> <span class="token function">install</span> axios use-axios-client
 </code></pre>
-<h3 id="axios-example">axios example</h3>
+<h3 id="21-axios-example">2.1. axios example</h3>
 <pre class="language-"><code class="lang-js">      axios
         <span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span>baseURL<span class="token punctuation">,</span> <span class="token punctuation">{</span>
           title<span class="token operator">:</span> <span class="token string">&quot;Hello World Post&quot;</span><span class="token punctuation">,</span> 
@@ -411,7 +411,7 @@ in the front-end uses xmlhttp reqeust. You can use use-axios for syntactic sugar
         <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=&gt;</span> 
             console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="use-axios-hook-example">use-axios hook example</h3>
+<h3 id="22-use-axios-hook-example">2.2. use-axios hook example</h3>
 <pre class="language-"><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> useAxios <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;use-axios-client&quot;</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -431,7 +431,7 @@ in the front-end uses xmlhttp reqeust. You can use use-axios for syntactic sugar
 <span class="token punctuation">}</span>
 </code></pre>
 <h2 id="03-hitchhikers-guide">03. hitchhiker&apos;s guide</h2>
-<h3 id="iterate-an-array">iterate an array</h3>
+<h3 id="31-iterate-an-array">3.1. iterate an array</h3>
 <pre class="language-"><code class="lang-js">    <span class="token comment">// src/components/users.js</span>
     <span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span>
 
@@ -452,7 +452,7 @@ in the front-end uses xmlhttp reqeust. You can use use-axios for syntactic sugar
 
     <span class="token keyword">export</span> <span class="token keyword">default</span> Users
 </code></pre>
-<h3 id="hooks">hooks</h3>
+<h3 id="32-hooks">3.2. Hooks</h3>
 <pre class="language-"><code class="lang-js">    <span class="token comment">// src/App.js</span>
 
     <span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span>
@@ -489,7 +489,7 @@ in the front-end uses xmlhttp reqeust. You can use use-axios for syntactic sugar
 
     <span class="token keyword">export</span> <span class="token keyword">default</span> App
 </code></pre>
-<h3 id="prevent-re-renders-on-functional-comps">prevent re-renders on functional comps</h3>
+<h3 id="33-prevent-re-renders-on-functional-comps">3.3. prevent re-renders on functional comps</h3>
 <p><code>const factorial = useMemo(() =&gt; factorialOf(number), [number]);</code></p>
 <h1 id="04-more-reads">04. More Reads</h1>
 <ul>
@@ -543,7 +543,7 @@ in the front-end uses xmlhttp reqeust. You can use use-axios for syntactic sugar
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Setup & Quick Ref","level":"3.2","depth":1,"next":{"title":"Boilerplate","level":"3.3","depth":1,"path":"react/boilerplate.md","ref":"react/boilerplate.md","articles":[]},"previous":{"title":"Overview","level":"3.1","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"react/setup.md","mtime":"2021-12-08T08:07:36.833Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-12-08T09:25:11.817Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Setup & Quick Ref","level":"3.2","depth":1,"next":{"title":"Boilerplate","level":"3.3","depth":1,"path":"react/boilerplate.md","ref":"react/boilerplate.md","articles":[]},"previous":{"title":"Overview","level":"3.1","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","advanced-emoji","prism","highlight","copy-code-button","edit-link","github","github-buttons","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hamzeen/learn-js/"},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"hamzeen","repo":"learn-js","type":"star","size":"small","count":true},{"user":"hamzeen","repo":"learn-js","type":"watch","size":"small","count":true}]},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-54001708-2"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/hamzeen/learn-js/tree/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Learn JS","gitbook":"3.1.1"},"file":{"path":"react/setup.md","mtime":"2021-12-08T10:20:27.301Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2021-12-08T10:39:16.748Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

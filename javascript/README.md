@@ -7,15 +7,16 @@ Today it can run outside the browser thanks to Node.js which embraces JS anywher
  * Babel: converts ES6+ code to backward compatibale JS for legacy browsers. A transpiler (special type compiler)
  * Data Types: Undefined | Null | Boolean| String| Symbol | Number | Object
  * Scopes: `global`, `local` & `block-scope`
+ * Engines: Edge - Chakra, Spider Monkey - Firefox, V8 - Chrome
 
 # 2. Path to Nodejs
 
-## V8 (Lars Bak, Danish Developer)
+## 2.1. V8 (Lars Bak, Danish Developer)
 V8 was menat to improve performance of rendering in Chrome.
 The team cam up with a break through idea to convert javascript into machine code and then subsequently byte code. This was toally new got traction real fast as it drastically improved rendering speeds within Chrome.
 
 
-## NODE.js (Ryan Dahl)
+## 2.2. NODE.js (Ryan Dahl)
 the v8 engine paved the way for Node.js with v8, javascript was no longer 
 a browser interpreted language it could be compiled outside.  
 Node.js took advantage of this & showed that JS could now be used to build servers & 
@@ -25,7 +26,7 @@ Hence it enabled js to be used even for desktop applications. Ex: Electron (Code
 
 * Simple Server: `npx http-server -a 0.0.0.0 -p 8000`
 
-## Sorting inside different JS Engines
+## 2.3. Sorting inside different JS Engines
 * `arrays.sort` in v8 engine uses Quick Sort but Insertion Sort for an arrays with 10 or less items. [ref](https://blog.shovonhasan.com/time-space-complexity-of-array-sort-in-v8/); Firefox uses merge sort.
 ```js
 function QuickSort(a, from, to) {
@@ -38,4 +39,3 @@ function QuickSort(a, from, to) {
     } 
     ...
 ```
-

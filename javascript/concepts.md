@@ -100,10 +100,37 @@ $(document).ready(function() {
 
 ## SOLID Principles
  * S: Single Responsibility
+	* class should have only one reason to change.
  * O: Open/Close Principle
+	* software entities (classes, modules, methods, etc.) should be open for extension, but closed for modification
  * L: Liskov Substitution
  * I: Interface Segregation
  * D: Dependency Inversion
+	* high level modules should not depend on low level modules; both should depend on abstractions. Abstractions should not depend on details.  Details should depend upon abstractions.
 
-## DB Transaction
-unit of work that's completed or undone as a unit.
+## Quick Ref:
+ * JWT: header. payload. signature
+ * ESB: service brokering & Orchestration
+ * OOP: Abstraction, Inheritance, Encapsulation, Ploymorphism
+ * Angular: 2-way binding; React: 1-way binding
+ * TDD: react - Jest, Mocha; Angular - jasmine
+
+
+# 3. CSS / SCSS
+ * Mixin: re-use styles. ex: horizontal-list
+ * Mixin: Nesting Selectors, Inheritance Selectors
+ * Frameworks Bootstrap, Tailwind
+
+
+# 4. Databases / Backend
+ * DB Transaction: unit of work that's completed or undone as a unit.
+ * Http verbs Put vs Patch
+
+
+# 5. Backend
+ * Microservices: arranges an app into loosely coupled services. Variant of SOA structual style.
+ * Micro Front-ends: organizes an front-end into loosely coupled modules.
+ * SSL: prevent MITM attacks
+ * HTTPS: makes a secure connection by establshing an *encrypted link* between the browser & the server or between 2 systems.
+ 
+ 

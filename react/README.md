@@ -65,10 +65,5 @@ it works on 3 pillars: `Observable | Observers | Schedulars`
 
 
 ## Quick Ref
- * JWT: header. payload. signature
- * SSL: prevent MITM attacks.
- * ESB: service brokering & Orchestration
- * Microservices: variant of SOA strucutural style. arranges an application asa a loosely coupled services.
- * OOP: Abstraction, Inheritance, Encapsulation, Ploymorphism
  * For in ... (enumaerates keys)... | For of ... (values)
  * Higher-order Controlled / Uncontrolled Components

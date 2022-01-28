@@ -16,6 +16,9 @@
   return (Object.keys(obj).length) === 0;
  }
 
+ // array of 8 objs
+ const ar1 = new Array(8).fill({name: 'labs'}).map((el, idx ) => 
+ ({...el, combine: `name: ${el.name} id: ${idx}`, id: idx}));
 
  // ensures an array without null objs
  const ar2 = aryX.filter(Boolean).map((obj) => obj.id);

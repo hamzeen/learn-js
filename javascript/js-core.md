@@ -20,8 +20,8 @@
  const ar1 = new Array(8).fill({name: 'labs'}).map((el, idx ) => 
  ({...el, combine: `name: ${el.name} id: ${idx}`, id: idx}));
 
- // ensures an array without null objs
- const ar2 = aryX.filter(Boolean).map((obj) => obj.id);
+ // returns an array without null objs
+ const ar2 = a1.filter(Boolean).map((obj) => obj.id);
 
  // unique array
  let unique = [...new Set(items)];

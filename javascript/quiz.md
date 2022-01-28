@@ -20,8 +20,8 @@
 
   const cleanAry = master.filter(Boolean);
   const result = {
-    sum: cleanAry.filter(a => typeof a === 'number').reduce((b,c) => b+c, 0),
-    product: cleanAry.filter(a => typeof a === 'number').reduce((b,c) => b*c, 1).toFixed(2),
+    sum: cleanAry.filter(a => typeof a === 'number').reduce((b,c) => b+c, 0).toFixed(2),
+    product: cleanAry.filter(a => typeof a === 'number').reduce((b,c) => b*c, 1),
     sort: cleanAry.filter(a => typeof a === 'number').sort((a, b) => a - b),
     text: cleanAry.filter(a=> typeof a === 'string').join(' ')
   };

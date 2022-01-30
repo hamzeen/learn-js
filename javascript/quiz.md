@@ -1,6 +1,7 @@
 ## Q1 | isObject
 ```js
 typeof x === 'object' && x !== null
+# warn! typeof null === 'object'
 ```
 
 ## Q2 | filter | sort | add | concatenate

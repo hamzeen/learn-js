@@ -3,7 +3,7 @@
 typeof x === 'object' && x !== null
 ```
 
-## Q2| filter | sort | add | concatenate
+## Q2 | filter | sort | add | concatenate
 ```js
  const master = [
     3,"we",-1,NaN,undefined,

@@ -1,3 +1,8 @@
+## Q1 isObject
+```js
+typeof x === 'object' && x !== null
+```
+
 ## Q1 | filter | sort | add | concatenate
 ```js
  const master = [

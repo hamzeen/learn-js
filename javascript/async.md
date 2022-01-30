@@ -33,6 +33,6 @@ for(let i = 0; i < 5; i++) {
   setTimeout(() => { 
     console.log("var:", i)
   }, i * 1000);
-} // prints from 1 to 5 in 5 secs.
+} // prints from 0 to 4 in 5 secs.
 
 ```

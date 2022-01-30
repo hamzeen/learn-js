@@ -22,3 +22,14 @@ typeof x === 'object' && x !== null
 //  {"sum":"66.00","product":-15682.5,"sort":[-1,1,3,10.25,12.75,40],"text":"we are the world"}
   
 ```
+## Q3 | title case
+```js
+function titleCase(inputStr) {
+  return inputStr
+     .split(' ')
+     .map(w => w.charAt(0).toUpperCase()+w.slice(1))
+     .join(' ');
+}
+const str = 'we are the world';
+titleCase(str);
+```

@@ -6,21 +6,17 @@ typeof x === 'object' && x !== null
 ## Q2| filter | sort | add | concatenate
 ```js
  const master = [
-    3,
-    "we",
-    -1,
+    3,"we",-1,
     NaN,
     undefined,
     10.25,
     [],
     "are",
     "",
-    40,
-    0,
+    40,0,
     "the world",
     null,
-    1,
-    12.75
+    1,12.75
   ];
 
   const cleanAry = master.filter(Boolean);

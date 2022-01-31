@@ -28,7 +28,7 @@ const {name, age, city} = user;
   
 ```
 ## moment js
-[moment hamzeen](https://codepen.io/hamzeen/pen/PgbzGx)
+moment demo: [codepen](https://codepen.io/hamzeen/pen/PgbzGx)
 
 ```js
 var start = moment("2018-03-10", "YYYY-MM-DD");

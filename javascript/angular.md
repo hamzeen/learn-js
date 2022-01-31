@@ -9,6 +9,7 @@
 * You can also use ng generate `directive`|`pipe`|`service`|`class`|`guard`|`interface`|`enum`|`module`.
 * package.json: "network": "ng serve --host 0.0.0.0"
 
+
 ## RegEx
 
 ```js
@@ -66,6 +67,12 @@ export class AppStateService {
   }
 }
 
+```
+
+## local storage
+```js
+localStorage.setItem('abc','a')
+localStorage.getItem('abc')
 ```
 
 

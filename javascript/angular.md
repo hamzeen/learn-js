@@ -11,6 +11,23 @@
 * You can also use ng generate `directive`|`pipe`|`service`|`class`|`guard`|`interface`|`enum`|`module`.
 * package.json: "network": "ng serve --host 0.0.0.0"
 
+## Pipes
+* `npx ng generate pipe pipes/titlecase`
+```js
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({ name: 'titlecase' })
+export class TitlecasePipe implements PipeTransform {
+  transform(str: string): string {
+    return str
+      .split(' ')
+      .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(' ');
+  }
+}
+```
+
+
 ## SCSS Support
 ```sh
 // initial project generation

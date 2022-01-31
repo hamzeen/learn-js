@@ -50,7 +50,7 @@ ex1: order of css definition matters!
 .blue { background: blue; }
 .red { background: red; }
 
-// we see Hello in red bg. The order the class ref here is no importnant.
+// we see Hello in RED bg. The order the class ref here is no importnant.
 <div class="red blue">Hello</div>
 ```
 

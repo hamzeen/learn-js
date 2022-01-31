@@ -23,6 +23,13 @@ static valdiateUsername(control: AbstractControl): { [key: string]: boolean } | 
 }
 ```
 
+```js
+// filepath
+var filePathRegex = /(?:[^\/\\]*[\/\\]){2}(?:[^.]*[.]){1}/gm;
+Boolean(tests[test].match(filePathRegex))
+```
+
+
 ## Adding controls after defining group:
 ```js
 constructor(private fb: FormBuilder) {

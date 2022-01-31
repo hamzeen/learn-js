@@ -72,6 +72,12 @@ const str = 'we are the world';
 titleCase(str);
 ```
 
+## Flat Sum
+```js
+const arr1 = [0, 1, 2, [3, 4]];
+const sum = arr1.flat(1).reduce((a,b) => a+b, 0);
+```
+
 
 # CSS
 

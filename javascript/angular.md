@@ -114,3 +114,39 @@ describe('AppComponent', () => {
   });
 }
 ```
+
+```js
+// countries class
+import { countryCodes } from '../constants/countryCodes';
+export class Util {
+  public countries: any[];
+
+  public getProducts() {
+    for(var i in countryCodes)
+      this.countries.push([i, countryCodes[i]]);
+
+    return this.countries;
+  }
+}
+
+import { countries } from ‘../constants/countryCodes’;
+import { Util } from ‘./util’;
+ 
+let testClass: Util = null;
+describe(‘Util Tests', () => {
+  beforeEach(() => {
+    testClass = new Util();
+  });
+ 
+  it('should ensure getCountries is based on countries file', () => {
+    const actual = testClass.getCountries;
+    expect(actual[0].id).toEqual(countries[0].id);
+  });
+});
+
+// constants/countryCodes.ts
+export const countries = {
+  'AF': 'Afghanistan',
+  'SG': 'Singapore'
+}
+```

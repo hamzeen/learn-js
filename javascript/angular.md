@@ -7,6 +7,7 @@
 
 * Code scaffolding:ng generate component component-name to generate a new component. 
 * You can also use ng generate `directive`|`pipe`|`service`|`class`|`guard`|`interface`|`enum`|`module`.
+* package.json: "network": "ng serve --host 0.0.0.0"
 
 ## Directives
 Classes that additional functionality to elements.

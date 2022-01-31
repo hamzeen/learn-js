@@ -3,6 +3,7 @@
 
 ## NG CLI - Generate
 * `npm install -g @angular/cli`
+* `ng new my-app --style=scss`
 * `npx ng genearate component currency-converter --force`
 * `npx ng genearate service history --force`
 

@@ -89,6 +89,7 @@ localStorage.getItem('abc')
 * JWT CAN NOT be validated in Front-End. You could check if it has expired.
 You can break down the JWT Token at JWT.io's debugger tool.
 * SECRET: the secret used to sign the jwt token (default `secret`)
+* [link] (https://gist.github.com/hamzeen/824761ffe3c605fa3c7ee270d871dc51)
 
 ## Signing or Creating A JWT
 ```js

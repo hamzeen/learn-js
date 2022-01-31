@@ -3,8 +3,13 @@
 typeof x === 'object' && x !== null
 // warn! typeof null === 'object'
 ```
+## Q2 | Destrcuture
+```js
+const user = {name: 'bertha benz', age: 28, city: 'budapest'}
+const {name, age, city} = user;
+```
 
-## Q2 | filter | sort | add | concatenate
+## Q3 | filter | sort | add | concatenate
 ```js
  const master = [
     3,"we",-1,NaN,undefined,
@@ -22,7 +27,7 @@ typeof x === 'object' && x !== null
 //  {"sum":"66.00","product":-15682.5,"sort":[-1,1,3,10.25,12.75,40],"text":"we are the world"}
   
 ```
-## Q3 | title case
+## Q4 | title case
 ```js
 function titleCase(inputStr) {
   return inputStr

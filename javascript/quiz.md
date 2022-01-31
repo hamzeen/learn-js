@@ -37,7 +37,7 @@ titleCase(str);
 
 # CSS
 
-* `Styleguide`, Pattern Library, `Design Systems`. UI Design: `InVision`, `Figma`
+* UI Design: `InVision`, `Figma`. Component lib: `Styleguide`, Pattern Library, `Design Systems`
 * Frameworks: `Bootstrap`, `Tailwind`, Meterial Design
 * Bootstrap uses `Flexbox` for its [grid](https://uxplanet.org/how-the-bootstrap-4-grid-works-a1b04703a3b7)
 

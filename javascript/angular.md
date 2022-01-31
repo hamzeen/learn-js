@@ -9,6 +9,23 @@
 * You can also use ng generate `directive`|`pipe`|`service`|`class`|`guard`|`interface`|`enum`|`module`.
 * package.json: "network": "ng serve --host 0.0.0.0"
 
+## SCSS Support
+```sh
+// initial project generation
+ng new my-sassy-app --style=scss
+
+// later
+ng set defaults.styleExt scss
+ng config defaults.styleExt = scss
+
+
+// .angular-cli.json
+"defaults": {
+  "styleExt": "scss",
+  "component": {
+  }
+}
+```
 
 ## JWT
 * A JWT is easy to identify. It is three strings separated by period (. the dot) symbol. Ex: `a0.b1.c9`

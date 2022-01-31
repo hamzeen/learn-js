@@ -82,6 +82,14 @@ localStorage.setItem('abc','a')
 localStorage.getItem('abc')
 ```
 
+## JWT
+* A JWT is easy to identify. It is three strings separated by period (. the dot) symbol. Ex: `a0.b1.c9`
+* They are: `header`, `payload`, `signature`
+* The canActivate method returns a boolean indicating whether or not navigation to a route should be allowed. If the user isn’t authenticated, they are re-routed to some other place, in this case a route called /login.
+* JWT CAN NOT be validated in Front-End. You could check if it has expired.
+You can break down the JWT Token at JWT.io's debugger tool.
+* SECRET: the secret used to sign the jwt token (default `secret`)
+
 
 # Unit Testing
 

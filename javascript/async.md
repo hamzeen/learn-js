@@ -21,7 +21,7 @@ provides a way to handle the asynchronous tasks in a synchronous manner.
     * If promise resolves successfully, the await operator returns the resolved value: const resolvedValue = await promise. Otherwise, you can catch a rejected promise inside try/catch.
     * An async function always returns a promise, which gives the ability to nest async functions.
 
-## the famous timeout tiriva
+## the famous timeout trivia
 ```js
 for(var i = 0; i < 5; i++) {
   setTimeout(() => { 
@@ -43,5 +43,5 @@ for(var i = 0; i < 5; i++) {
     }, i * 1000);
   }
   closure(i);
-} // 5 times 5 is printed
+} // prints from 0 to 4 in 5 secs.
 ```

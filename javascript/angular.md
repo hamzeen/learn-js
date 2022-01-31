@@ -90,6 +90,15 @@ localStorage.getItem('abc')
 You can break down the JWT Token at JWT.io's debugger tool.
 * SECRET: the secret used to sign the jwt token (default `secret`)
 
+## Signing or Creating A JWT
+```js
+const jwt = require('jsonwebtoken');
+// Create a token
+const payload = { user: user.name };
+const options = { expiresIn: '2d', issuer: 'https://scotch.io' };
+const secret = process.env.JWT_SECRET;
+const token = jwt.sign(payload, secret, options);
+```
 
 # Unit Testing
 

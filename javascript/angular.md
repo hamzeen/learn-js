@@ -2,6 +2,7 @@
 # Angular
 
 ## NG CLI - Generate
+* `npm install -g @angular/cli`
 * `npx ng genearate component currency-converter --force`
 * `npx ng genearate service history --force`
 

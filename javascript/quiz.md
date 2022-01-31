@@ -33,3 +33,19 @@ function titleCase(inputStr) {
 const str = 'we are the world';
 titleCase(str);
 ```
+
+
+# CSS
+
+has 3 types of styling: `inline`, `header` and as a `resource`. 
+`CSS Specificity` is important to know when you work iwth it.
+
+```html
+// here the lass css declaration takes precedence
+.blue { background: blue; }
+.red{ background: red; }
+
+// we see Hello in red bg. The order the class ref here is no importnant.
+<div class="red blue">Hello</div>
+```
+

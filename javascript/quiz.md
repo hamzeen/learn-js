@@ -19,6 +19,11 @@ console.log(data);
 // array with 8 objects
 const aryX = new Array(8).fill({name: 'labs'}).map((el, idx ) => 
  ({...el, combine: `name: ${el.name} id: ${idx}`, id: idx}));
+ 
+ // add at start
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Kiwi");
+const fruiteNew = ['', fruits];
 ```
 
 ## Q4 | filter | sort | add | concatenate

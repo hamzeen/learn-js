@@ -6,7 +6,7 @@
 * `npx ng genearate service history --force`
 
 * Code scaffolding:ng generate component component-name to generate a new component. 
-* You can also use ng generate directive|pipe|service|class|guard|interface|enum|module.
+* You can also use ng generate `directive`|`pipe`|`service`|`class`|`guard`|`interface`|`enum`|`module`.
 
 ## Directives
 Classes that additional functionality to elements.

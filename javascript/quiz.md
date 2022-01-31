@@ -38,10 +38,10 @@ titleCase(str);
 # CSS
 
 
-* Frameworks: `Bootstrap`, `Tailwind`, Meterial Design
+* Styleguide, Pattern Library, Design Systems
 * UI Design: `InVision`, `Figma`
-
-* Bootstrap uses `FlexGrid` to build its [grid](https://uxplanet.org/how-the-bootstrap-4-grid-works-a1b04703a3b7)
+* Frameworks: `Bootstrap`, `Tailwind`, Meterial Design
+* Bootstrap uses `Flexbox` for its [grid](https://uxplanet.org/how-the-bootstrap-4-grid-works-a1b04703a3b7)
 
 * 3 levels of styling: `inline`, `header` and as a `resource`. 
 `CSS Specificity` is important to know when you work iwth it.

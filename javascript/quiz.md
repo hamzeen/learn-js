@@ -44,7 +44,7 @@ titleCase(str);
 * 3 levels of styling: `inline`, `header` and as a `resource`. 
 `CSS Specificity` is important to know when you work iwth it.
 
-ex1:
+ex1: order of css definition matters!
 ```html
 // here the lass css declaration takes precedence
 .blue { background: blue; }
@@ -54,7 +54,7 @@ ex1:
 <div class="red blue">Hello</div>
 ```
 
-ex2:
+ex2: being more specific matters!
 ```html
 // the first gets applied. Gets higher score in `CSS Specificity`
 div.label { color: green; }

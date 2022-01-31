@@ -23,7 +23,7 @@ const aryX = new Array(8).fill({name: 'labs'}).map((el, idx ) =>
  // add at start
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 // fruits.unshift("Kiwi");
-const fruiteNew = ['Kiwi', fruits];
+const fruitsNew = ['Kiwi', ...fruits];
 ```
 
 ## Q4 | filter | sort | add | concatenate

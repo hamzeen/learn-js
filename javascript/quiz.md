@@ -59,15 +59,9 @@ ex2:
 <div class="label">Hello</div>
 
 // the first gets applied. Gets higher score in `CSS Specificity`
-div.label {
-  color: green;
-}
-.label {
-  color: black;
-}
-div {
-  color: blue;
-}
+div.label { color: green; }
+.label { color: black; }
+div { color: blue; }
 ```
 
 

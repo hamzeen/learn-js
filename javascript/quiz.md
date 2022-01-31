@@ -9,7 +9,14 @@ const user = {name: 'bertha benz', age: 28, city: 'budapest'}
 const {name, age, city} = user;
 ```
 
-## Q3 | filter | sort | add | concatenate
+## Q3 | Spread Operator
+```js
+const data = [{id:1}, {id:3}]
+    .map(el => ({ ...el, name: `name ${el.id}` }));
+console.log(data);
+```
+
+## Q4 | filter | sort | add | concatenate
 ```js
  const master = [
     3,"we",-1,NaN,undefined,
@@ -27,7 +34,7 @@ const {name, age, city} = user;
 //  {"sum":"66.00","product":-15682.5,"sort":[-1,1,3,10.25,12.75,40],"text":"we are the world"}
   
 ```
-## moment js
+## Q4| moment js
 moment demo: [codepen](https://codepen.io/hamzeen/pen/PgbzGx)
 
 ```js
@@ -43,7 +50,7 @@ var years = moment().diff('1986-10-15', 'years');
 console.log(years);
 ```
 
-## Q4 | title case
+## Q5 | title case
 ```js
 function titleCase(inputStr) {
   return inputStr

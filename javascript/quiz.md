@@ -27,6 +27,22 @@ const {name, age, city} = user;
 //  {"sum":"66.00","product":-15682.5,"sort":[-1,1,3,10.25,12.75,40],"text":"we are the world"}
   
 ```
+## moment js
+[moment hamzeen](https://codepen.io/hamzeen/pen/PgbzGx)
+
+```js
+var start = moment("2018-03-10", "YYYY-MM-DD");
+var end = moment("2018-03-15", "YYYY-MM-DD");
+
+// difference in number of days
+var diff = moment.duration(start.diff(end)).asDays();
+console.log("days:: " + Math.abs(diff));
+
+// elapsed years
+var years = moment().diff('1986-10-15', 'years');
+console.log(years);
+```
+
 ## Q4 | title case
 ```js
 function titleCase(inputStr) {

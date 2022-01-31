@@ -35,4 +35,13 @@ for(let i = 0; i < 5; i++) {
   }, i * 1000);
 } // prints from 0 to 4 in 5 secs.
 
+OR...
+for(var i = 0; i < 5; i++) { 
+  function closure(i) {
+    setTimeout(() => { 
+      console.log("var:", i)
+    }, i * 1000);
+  }
+  closure(i);
+} // 5 times 5 is printed
 ```

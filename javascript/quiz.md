@@ -11,9 +11,14 @@ const {name, age, city} = user;
 
 ## Q3 | Spread Operator
 ```js
+// add new property
 const data = [{id:1}, {id:3}]
     .map(el => ({ ...el, name: `name ${el.id}` }));
 console.log(data);
+
+// array with 8 objects
+const aryX = new Array(8).fill({name: 'labs'}).map((el, idx ) => 
+ ({...el, combine: `name: ${el.name} id: ${idx}`, id: idx}));
 ```
 
 ## Q4 | filter | sort | add | concatenate

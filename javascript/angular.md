@@ -22,6 +22,17 @@ static valdiateUsername(control: AbstractControl): { [key: string]: boolean } | 
 }
 ```
 
+## Adding controls after defining group:
+```js
+constructor(private fb: FormBuilder) {
+    this.myForm = fb.group({
+        'name': ['', [Validators.required],
+        'surname': ['', [Validators.required],
+        'email': ['', [validateEmail]],
+    });
+}
+this.myForm.addControl('newcontrol',[]);
+```
 
 ## Directives
 Classes that additional functionality to elements.

@@ -9,6 +9,20 @@
 * You can also use ng generate `directive`|`pipe`|`service`|`class`|`guard`|`interface`|`enum`|`module`.
 * package.json: "network": "ng serve --host 0.0.0.0"
 
+## RegEx
+
+```js
+// 2 times the same character consecutively
+static valdiateUsername(control: AbstractControl): { [key: string]: boolean } | null {
+    const regex = new RegExp("([a-zA-Z\\d])\\1");
+    if(!control.value || (control.value && !Boolean(control.value.match(regex)))) {
+      return { invalidUsername: true }
+    }
+    return null;
+}
+```
+
+
 ## Directives
 Classes that additional functionality to elements.
 

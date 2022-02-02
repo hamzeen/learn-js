@@ -68,12 +68,11 @@ const flatGroups = groups.map((item, idx) => {
 
 // M2: without using spread operator
 const flatGroups = groups.map((item, idx) => {
-        item['seats'].map((seat) => {
+        return item['seats'].map((seat) => {
             seat.label = `L${idx+1}`;
             seat.id = item['id'];
             return seat;
         });
-        return item;
     })
     .flat();
 

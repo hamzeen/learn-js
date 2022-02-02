@@ -1,3 +1,4 @@
+## find given value for a given prop at any depth of `an Object`
 ```js
 function isObject(obj) {
     return (typeof obj === "object" || typeof obj === "function") && obj !== null;

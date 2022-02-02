@@ -57,14 +57,27 @@ const groups = [
        }]
   }];
   
-// moves parant prop to children & flattens it.
+// M1: moves parant prop to children & flattens it.
 const flatGroups = groups.map((item, idx) => {
         return item['seats'].map((seat) => {
             return {...seat, label: `L${idx+1}`, id: item['id']};
         });
     }).flat();
+    
+    
 
-// copies parent prop to children
+// M2: without using spread operator
+const flatGroups = groups.map((item, idx) => {
+        item['seats'].map((seat) => {
+            seat.label = `L${idx+1}`;
+            seat.id = item['id'];
+            return seat;
+        });
+        return item;
+    })
+    .flat();
+
+// M3: copies parent prop to children
 const flatGroups = groups.map((item, idx) => {
         item['seats'].map((seat) => {
             seat.label = `L${idx+1}`;
@@ -74,6 +87,6 @@ const flatGroups = groups.map((item, idx) => {
         return item;
     });
     
-// get a lfat array
+// M3: get a flat array
 const flatAry = [].concat(...flatGroups.map((ap) => ap['seats']));
 ```

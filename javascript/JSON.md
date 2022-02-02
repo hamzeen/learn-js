@@ -1,5 +1,5 @@
 ```js
-function isObject(obj: any): boolean {
+function isObject(obj) {
     return (typeof obj === "object" || typeof obj === "function") && obj !== null;
 }
 
@@ -10,7 +10,7 @@ function isObject(obj: any): boolean {
  * @param: propertyName
  * @param: valueToMatch 
  */
-const isProductOf = (record: Insurance, propertyName: string, valueToMatch: string): boolean => {
+const isProductOf = (record, propertyName, valueToMatch) => {
     if (!isObject(record)) {
         return false;
     }

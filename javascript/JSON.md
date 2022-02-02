@@ -77,6 +77,8 @@ const flatGroups = groups.map((item, idx) => {
     })
     .flat();
 
+
+
 // M3: copies parent prop to children
 const flatGroups = groups.map((item, idx) => {
         item['seats'].map((seat) => {

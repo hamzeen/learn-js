@@ -53,7 +53,7 @@ const matches = sales.filter((record) => isProductof(record, 'user', 'Joe'));
 console.log(matches);
 ```
 
-## FLATTEN: after pushing parent node into children
+## FLATTEN an array of objects
 ```js
 const tickets = [
   {

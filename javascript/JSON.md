@@ -97,8 +97,7 @@ const flatGroups = groups.map((item, idx) => {
             seat.id = item['id'];
             return seat;
         });
-    })
-    .flat();
+    }).flat();
 
 
 

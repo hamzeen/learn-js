@@ -59,11 +59,11 @@ const tickets = [
   {
      "id": "+91611111111", 
      "seats":[{
-       "section":"main hall",
+       "room":"main hall",
        "row":"1",
        "seat":"4"
      }, {
-       "section":"main hall",
+       "room":"main hall",
        "row":"1",
        "seat":"3"
      }] 
@@ -71,11 +71,11 @@ const tickets = [
   {
      "id": "+91611111112", 
      "seats":[{
-           "section":"balcony",
+           "room":"balcony",
            "row":"1",
            "seat":"1"
        }, {
-           "section":"balcony",
+           "room":"balcony",
            "row":"1",
            "seat":"2"
        }]

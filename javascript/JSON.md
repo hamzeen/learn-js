@@ -5,13 +5,13 @@ const sales = [
     product: "TravelBag”,
     travelBagInformation: {
       price: 3,
-      user: "Mark"
+      user: "Joe"
     }
   }, {
     product: “Model”Car,
     carInformation: {
       lights: true,
-      user: "Mark"
+      user: "Joe"
     }
   }, {
     product: “LegoHome",

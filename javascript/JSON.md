@@ -2,19 +2,19 @@
 ```js
 const sales = [
   {
-    product: "TravelBag”,
+    product: "TravelBag",
     travelBagInformation: {
       price: 3,
       user: "Joe"
     }
   }, {
-    product: “Model”Car,
+    product: "ModelCar",
     carInformation: {
       lights: true,
       user: "Joe"
     }
   }, {
-    product: “LegoHome",
+    product: "LegoHome",
     modelInformation: {
       price: 5,
       user: “Nick”

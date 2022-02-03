@@ -1,4 +1,4 @@
-## find given value for a given prop at any depth of `an Object`
+## `find given value` for a given prop at `any depth of an Object`
 ```js
 const sales = [
   {
@@ -53,7 +53,7 @@ const matches = sales.filter((record) => isProductof(record, 'user', 'Joe'));
 console.log(matches);
 ```
 
-## FLATTEN an array of objects
+## `FLATTEN` an array of objects
 ```js
 const tickets = [
   {

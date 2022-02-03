@@ -55,7 +55,7 @@ console.log(matches);
 
 ## FLATTEN: after pushing parent node into children
 ```js
-const groups = [
+const tickets = [
   {
      "id": "+91611111111", 
      "seats":[{

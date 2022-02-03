@@ -1,5 +1,27 @@
 ## find given value for a given prop at any depth of `an Object`
 ```js
+const sales = [
+  {
+    product: "TravelBag”,
+    travelBagInformation: {
+      price: 3,
+      user: "Mark"
+    }
+  }, {
+    product: “Model”Car,
+    carInformation: {
+      lights: true,
+      user: "Mark"
+    }
+  }, {
+    product: “LegoHome",
+    modelInformation: {
+      price: 5,
+      user: “Nick”
+    }
+  }
+];
+
 function isObject(obj) {
     return (typeof obj === "object" || typeof obj === "function") && obj !== null;
 }

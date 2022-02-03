@@ -49,6 +49,8 @@ const isProductOf = (record, propertyName, valueToMatch) => {
     }
     return false;
 };
+const matches = sales.filter((record) => isProductof(record, 'user', 'Joe'));
+console.log(matches);
 ```
 
 ## FLATTEN: after pushing parent node into children

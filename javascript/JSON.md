@@ -17,7 +17,7 @@ const sales = [
     product: "LegoHome",
     modelInformation: {
       price: 5,
-      user: “Nick”
+      user: "Nick"
     }
   }
 ];

@@ -24,6 +24,9 @@ it could be used for server side programming. Node.js promotes anywhere & everyw
 
 Hence it enabled js to be used even for desktop applications. Ex: Electron (CodeEditor: Atom).
 
+* In essence a `Single Threaded` process.
+* `Spawns child threads` for certain tasks, example: `async IO` operations.
+* `Does Not` expose child threads & thread managmeent for Devs.
 * Simple Server: `npx http-server -a 0.0.0.0 -p 8000`
 
 ## 2.3. Sorting inside different JS Engines
